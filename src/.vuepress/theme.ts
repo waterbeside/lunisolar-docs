@@ -13,7 +13,7 @@ export default hopeTheme({
   // iconAssets: "iconfont",
   iconAssets: "//at.alicdn.com/t/c/font_3869282_wrxk4fhonc.css",
 
-  logo: "/logo.svg",
+  logo: "/logo.png",
 
   repo: "waterbeside/lunisolar",
 

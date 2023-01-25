@@ -1,6 +1,28 @@
 // place your custom styles here
-.hero-info-wrapper h1 {
-  font-family: 'Helvetica Neue';
+.hero-info-wrapper {
+  flex-direction: column;
+  img {
+    margin-top: 40px;
+    max-height: 128px;
+  }
+  h1 {
+    font-family: 'Quotes, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;';
+    font-size: 76px;
+    background-image: linear-gradient(315deg,#d34242 25%,#ffb405);
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+
+  }
+  .description, h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
 }
 
 .feature-item {

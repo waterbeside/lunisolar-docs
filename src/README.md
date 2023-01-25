@@ -2,11 +2,11 @@
 home: true
 icon: home
 title: 项目主页
-# heroImage: /logo.svg
+heroImage: /logo.png
 heroText: LUNISOLAR
 tagline: 一个专业的Javascript农历库
 actions:
-  - text: 快速上手
+  - text: 快速上手 ➔
     link: /zh/demo/
     type: primary
 

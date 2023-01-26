@@ -17,7 +17,9 @@ export default hopeTheme({
 
   repo: "waterbeside/lunisolar",
 
-  // docsDir: "demo/theme-docs/src",
+  docsRepo: "waterbeside/lunisolar-docs",
+
+  docsDir: "/src",
 
   // navbar
   navbar: zhNavbar,
@@ -29,12 +31,15 @@ export default hopeTheme({
 
   displayFooter: true,
 
+  pure: true,
+
   // page meta
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
 
   plugins: {
+ 
 
     // Disable features you don’t want here
     mdEnhance: {
@@ -51,33 +56,33 @@ export default hopeTheme({
       imgLazyload: true,
       imgSize: false,
       include: true,
-      katex: false,
-      mark: true,
+      katex: true,
+      mark: false,
       mermaid: false,
-      playground: {
-        presets: ["ts", "vue"],
-      },
+      // playground: {
+      //   presets: ["ts", "vue"],
+      // },
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
+      // stylize: [
+      //   {
+      //     matcher: "Recommended",
+      //     replacer: ({ tag }) => {
+      //       if (tag === "em")
+      //         return {
+      //           tag: "Badge",
+      //           attrs: { type: "tip" },
+      //           content: "Recommended",
+      //         };
+      //     },
+      //   },
+      // ],
       sub: true,
       sup: true,
       tabs: true,
-      vPre: true,
-      vuePlayground: true,
+      vPre: false,
+      vuePlayground: false,
     },
 
     // uncomment these if you want a pwa

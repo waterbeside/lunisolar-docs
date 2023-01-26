@@ -4,14 +4,14 @@ icon: home
 title: 项目主页
 heroImage: /logo.png
 heroText: LUNISOLAR
-tagline: 一个专业的Javascript农历库
+tagline: 专业的Javascript农历库
 actions:
   - text: 快速上手 ➔
-    link: /zh/demo/
+    link: /guide/quickStart
     type: primary
 
   - text: 文档
-    link: /zh/guide/
+    link: /guide/about
     # type: primary
 
 features:

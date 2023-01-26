@@ -1,4 +1,18 @@
 // place your custom styles here
+html[data-theme=dark] {
+  --bg-color: #212121;
+  --sidebar-bg-color: #202020;
+}
+
+html[data-theme=light] {
+  --bg-color: #fcfcfc;
+}
+
+
+#app {
+  --code-tabs-nav-text-color: #ddd;
+ }
+
 .hero-info-wrapper {
   flex-direction: column;
   img {

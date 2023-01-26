@@ -4,6 +4,8 @@ specifiers:
   '@vuepress/client': 2.0.0-beta.60
   vue: ^3.2.45
   vuepress: 2.0.0-beta.60
+  vuepress-plugin-full-text-search2: ^0.4.0
+  vuepress-plugin-redirect: 2.0.0-beta.168
   vuepress-plugin-search-pro: 2.0.0-beta.166
   vuepress-theme-hope: 2.0.0-beta.165
 
@@ -11,6 +13,8 @@ devDependencies:
   '@vuepress/client': 2.0.0-beta.60
   vue: 3.2.45
   vuepress: 2.0.0-beta.60_dlgznq46b2nyvtu5wqobknojfm
+  vuepress-plugin-full-text-search2: 0.4.0
+  vuepress-plugin-redirect: 2.0.0-beta.168_e7jwb2ulu5orbkux7obq5onfau
   vuepress-plugin-search-pro: 2.0.0-beta.166_e7jwb2ulu5orbkux7obq5onfau
   vuepress-theme-hope: 2.0.0-beta.165_e7jwb2ulu5orbkux7obq5onfau
 
@@ -5181,6 +5185,19 @@ packages:
       - supports-color
     dev: true
 
+  /vuepress-plugin-full-text-search2/0.4.0:
+    resolution: {integrity: sha512-/MrCn32tkoGrjguLRBa4+nJfQAFXSPZVx4t6eRsIytlDLQkZogHLr61pyAKkIyIE1J9mUWPWprJzvRwqpQKWpQ==}
+    dependencies:
+      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/core': 2.0.0-beta.60
+      '@vuepress/utils': 2.0.0-beta.60
+      chokidar: 3.5.3
+      htmlparser2: 8.0.1
+      vue: 3.2.45
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /vuepress-plugin-md-enhance/2.0.0-beta.165_e7jwb2ulu5orbkux7obq5onfau:
     resolution: {integrity: sha512-xZQqNUADHANZ4Bw+gXkRo3D2em1CPJnQifRuirGIgb0LqdrCZ2/Q9NYwBfltB24/zSZ8BPEwk/99/Hn2XpsJww==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
@@ -5353,6 +5370,36 @@ packages:
     dependencies:
       vuepress: 2.0.0-beta.60_dlgznq46b2nyvtu5wqobknojfm
       vuepress-shared: 2.0.0-beta.165_e7jwb2ulu5orbkux7obq5onfau
+    transitivePeerDependencies:
+      - '@vuepress/client'
+      - supports-color
+    dev: true
+
+  /vuepress-plugin-redirect/2.0.0-beta.168_e7jwb2ulu5orbkux7obq5onfau:
+    resolution: {integrity: sha512-bcC1G9SbQykysbJk87YMDmvo34ANRXWkCAvSHARDA8HWKSQYe+tJ1m0iDnWPAEc5IuBDxREZ6YNH0dnz2FzOXQ==}
+    engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
+    hasBin: true
+    peerDependencies:
+      vuepress: 2.0.0-beta.60
+      vuepress-vite: 2.0.0-beta.60
+      vuepress-webpack: 2.0.0-beta.60
+    peerDependenciesMeta:
+      vuepress:
+        optional: true
+      vuepress-shared:
+        optional: true
+      vuepress-vite:
+        optional: true
+      vuepress-webpack:
+        optional: true
+    dependencies:
+      '@vuepress/cli': 2.0.0-beta.60
+      '@vuepress/core': 2.0.0-beta.60
+      '@vuepress/shared': 2.0.0-beta.60
+      '@vuepress/utils': 2.0.0-beta.60
+      cac: 6.7.14
+      vuepress: 2.0.0-beta.60_dlgznq46b2nyvtu5wqobknojfm
+      vuepress-shared: 2.0.0-beta.168_e7jwb2ulu5orbkux7obq5onfau
     transitivePeerDependencies:
       - '@vuepress/client'
       - supports-color
@@ -5549,6 +5596,40 @@ packages:
 
   /vuepress-shared/2.0.0-beta.166_e7jwb2ulu5orbkux7obq5onfau:
     resolution: {integrity: sha512-lfDVG2I5RbXrBGIVeF6WjcAzR8IT3nyWFMPtsmQVoO88v3ygQu4UxLla+apB0Wr4csR4M8PaBzhTVReJmeaAjQ==}
+    engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
+    peerDependencies:
+      '@vuepress/client': 2.0.0-beta.60
+      vuepress: 2.0.0-beta.60
+      vuepress-vite: 2.0.0-beta.60
+      vuepress-webpack: 2.0.0-beta.60
+    peerDependenciesMeta:
+      '@vuepress/client':
+        optional: true
+      vuepress:
+        optional: true
+      vuepress-vite:
+        optional: true
+      vuepress-webpack:
+        optional: true
+    dependencies:
+      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/shared': 2.0.0-beta.60
+      '@vuepress/utils': 2.0.0-beta.60
+      cheerio: 1.0.0-rc.12
+      dayjs: 1.11.7
+      execa: 6.1.0
+      fflate: 0.7.4
+      gray-matter: 4.0.3
+      striptags: 3.2.0
+      vue: 3.2.45
+      vue-router: 4.1.6_vue@3.2.45
+      vuepress: 2.0.0-beta.60_dlgznq46b2nyvtu5wqobknojfm
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /vuepress-shared/2.0.0-beta.168_e7jwb2ulu5orbkux7obq5onfau:
+    resolution: {integrity: sha512-deg0AZkvDBJnqFOqdqohcZynHxMDgLge2tEfqfcuDlmArZh5XteeXjmSIdZLkTubtEHT86YiLPbNrDrB5c3O6g==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.60

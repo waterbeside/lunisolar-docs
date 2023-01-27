@@ -32,6 +32,7 @@ export default hopeTheme({
   displayFooter: true,
 
   pure: true,
+  backToTop: false,
 
   // page meta
   metaLocales: {
@@ -51,7 +52,7 @@ export default hopeTheme({
       demo: false,
       echarts: false,
       figure: true,
-      flowchart: false,
+      flowchart: true,
       gfm: true,
       imgLazyload: true,
       imgSize: false,

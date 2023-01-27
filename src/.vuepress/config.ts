@@ -2,16 +2,18 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { redirectPlugin } from "vuepress-plugin-redirect";
+import { backToTopPlugin } from "@vuepress/plugin-back-to-top";
+
 
 
 export default defineUserConfig({
   base: "/lunisolar-docs/",
   title: "Lunisolar",
-
   theme,
 
   shouldPrefetch: false,
   plugins: [
+    backToTopPlugin(),
     searchProPlugin({
       // 索引全部内容
       indexContent: true,

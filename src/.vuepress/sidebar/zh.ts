@@ -10,7 +10,13 @@ export const zhSidebar = sidebar({
       // children: "structure",
       children: [
         'parse.md',
-        'gregorian.md'
+        'gregorian.md',
+        'lunar.md',
+        'solarTerm.md',
+        'char8.md',
+        'stem.md',
+        'branch.md',
+        'element5.md',
       ],
     },
   ], 

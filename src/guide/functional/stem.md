@@ -47,3 +47,14 @@ stem.e5
  */
 stem.trigram8
 ```
+
+## 十天干列表
+
+此为静态方法， 取得十天干名称列表
+
+```typescript
+/**
+ * @return {string[]}
+ */
+lunisolar.Stem.getNames()
+```

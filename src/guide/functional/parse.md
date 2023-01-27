@@ -1,5 +1,5 @@
 
-# 解释 (创建Lunisolar对象)
+# 解析 (创建Lunisolar对象)
 
 ## lunisolar()
 

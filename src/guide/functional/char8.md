@@ -134,3 +134,14 @@ sb.name
  */
 sb.value
 ```
+
+### 60天干地支列表
+
+此为静态方法，取得60甲子名称列表
+
+```typescript
+/**
+ * @return {string[]}
+ */
+lunisolar.SB.getNames()
+```

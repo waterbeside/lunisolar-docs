@@ -132,3 +132,14 @@ branch.destroying
  */
 branch.harming
 ```
+
+## 十二地支列表
+
+此为静态方法， 取得十二地支名称列表
+
+```typescript
+/**
+ * @return {string[]}
+ */
+lunisolar.Branch.getNames()
+```

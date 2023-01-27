@@ -6,6 +6,7 @@ $code-light-theme: "vsc-dark-plus";
 $code-dark-theme: "vsc-dark-plus";
 
 :root {
-  --back-to-top-color: #d3805a;
-  --back-to-top-color-hover: #ea8a30;
+  --back-to-top-color: #d3805a !important;
+  --back-to-top-color-hover: #ea8a30 !important;
+  --search-input-width: 5em !important;
 }

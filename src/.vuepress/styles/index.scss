@@ -1,4 +1,5 @@
 // place your custom styles here
+$primary-color: #df451b;
 
 html[data-theme=dark] {
   --bg-color: #212121;
@@ -10,8 +11,10 @@ html[data-theme=light] {
 }
 
 .suggestions {
-  position: fixed;
-  width: 100vw;
+  position: fixed !important;
+  left: 18vw !important;
+  top: calc(var(--navbar-line-height) + 7px) !important;
+  max-width: 100% !important;
 }
 
 
@@ -49,4 +52,31 @@ html[data-theme=light] {
   .icon {
     color: #464356
   }
+}
+
+
+.home {
+  .action-button {
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.6rem;
+  }
+  .action-button.primary {
+    background-image: linear-gradient(130deg, #c33732, $primary-color);
+  }
+  .action-button.primary:hover {
+    background-image: repeating-linear-gradient(130deg, $primary-color, #ff3c10);
+  }
+
+  .action-button.default {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+
+  .action-button.default:hover {
+    border: 1px solid $primary-color;
+    color: var(--white);
+    background-color: $primary-color;
+  }
+  
 }

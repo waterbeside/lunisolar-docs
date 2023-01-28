@@ -1,22 +1,18 @@
-
-name: 部署文档
+name: Deploy GitHub Pages
 
 on:
   push:
     branches:
-      # 确保这是你正在使用的分支名称
       - main
 
 jobs:
-  deploy-gh-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
+          persist-credentials: false
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -24,20 +20,8 @@ jobs:
           version: 7
           run_install: true
 
-
-      - name: Set Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: pnpm
-
-
       - name: Build
-        env:
-          NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          pnpm run docs:build
-          > src/.vuepress/dist/.nojekyll
+        run: pnpm docs:build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -45,4 +29,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: src/.vuepress/dist
-  

@@ -3,7 +3,8 @@
 通过SB实例的branch属性可取得天干对象Branch
 
 ```typescript
-const branch = lunisolar().char8.year.branch // 取得年柱的SB实例
+// 例如，取得年柱的地支
+const branch = lunisolar().char8.year.branch
 ```
 
 ## 地支名

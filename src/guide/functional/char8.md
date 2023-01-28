@@ -4,18 +4,26 @@
 
 - 八字实际上是用天干地支表示的历法
 - 一个天干地支组合有两个字， 年月日时分别以天干地支表示，则共有八个字，
-- 年、月、日、时，分别用天干地支表示，分别称为年柱、月柱、日柱、时柱，所以八字又称为四柱
+- 年、月、日、时用天干地支表示，分别称为年柱、月柱、日柱、时柱，所以八字又称为四柱
 :::
 
-```flowchart
-lsr => start: Lunisolar
-y => year
-m => month
-d => day
-h => hour
+Lunisolar实例上包含char8属性，返回一个[**Char8**](../../api/char8.md)实例，可取得相应天干支地支信息
+
+## 对象关系图
+
+```mermaid
+flowchart TD
+    lsr(Lunisolar)-->Char8--year/month/day/hour取得四柱对象-->SB
+    SB-->Stem
+    SB-->Branch
+    Stem--e5-->Element5
+    Stem--纳甲-->Trigram8
+    Branch--e5-->Element5
+    Branch--地支藏干-->Stem
+    Branch--相冲相刑相合等-->Branch
+    Char8--日主--> Stem
 ```
 
-Lunisolar实例上包含char8属性，返回一个Char8实例，可取得相应天干支地支信息
 
 ## 年柱
 
@@ -74,7 +82,7 @@ lunisolar().char8.me
 
 ## 天干地支
 
-上述年月日时四柱返回的天干地支对象:**SB**
+上述年月日时四柱返回的天干地支对象:[**SB**](../../api/sb.md)
 
 ```typescript
 const sb = lunisolar().char8.day

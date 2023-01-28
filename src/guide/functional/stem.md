@@ -1,7 +1,7 @@
 
 # 天干
 
-通过SB实例的stem属性可取得天干对象Stem
+通过SB实例的stem属性可取得天干对象[**Stem**](../../api/stem.md)
 
 ```typescript
 // 例如，取得年柱的天干

@@ -4,6 +4,8 @@
 
 `lunisolar.js`本身可能过`Lunisolar`实例的`char8`属性实现基本的八字查询功能, 但未包括十神和神煞等功能。使用**Char8Ex**插件后，将会在`Lunisolar``实例上添加一个char8ex()`方法, 除了包含原char8的功能外，还加入了十神和神煞的查询。
 
+使用`lunisolar().char8ex()`创建一个[**Char8Ex**](../../api/char8ex.md)实例
+
 ```typescript
 /**
  * @param sex 性别 0:坤造，1: 乾造
@@ -84,7 +86,7 @@ const c8 = lunisolar().char8ex(1) // 参数0为坤造，1为乾造
 
 ### 年柱
 
-取得年柱， 返回一个四柱对象
+取得年柱， 返回一个四柱对象 [**Pillar**](../../api/pillar.md)
 
 ```typescript
 /**
@@ -150,7 +152,7 @@ c8.list
 
 ### 胎元
 
-取得胎元, 返回一个SB实例
+取得胎元, 返回一个[SB](../../api/sb.md)实例
 
 ```typescript
 /**
@@ -203,7 +205,7 @@ c8.sexValue
 
 ### 空亡地支
 
-空亡地支, 返回元组 [Branch, Branch]
+空亡地支, 返回元组 [[Branch](../../api/branch.md), Branch]
 
 ```typescript
 /**
@@ -217,9 +219,9 @@ c8.day.missing
 
 ## 取天干和地支
 
-上述年月日时四柱返回的四柱实例对象: **Pillar**
+上述年月日时四柱返回的四柱实例对象: [**Pillar**](../../api/pillar.md)
 
-**Pillar**包含了**SB**类的所有原型方法，天干地支的相关用法，可以参考SB类的用法，这处不详细论述
+**Pillar**包含了[**SB**](../../api/sb.md)类的所有原型方法，天干地支的相关用法，可以参考SB类的用法，这处不详细论述
 
 ```typescript
 // 例如，从年柱取得 Pillar实例
@@ -245,7 +247,7 @@ pillar.stemTenGod
 
 ### 地支十神
 
-取得地支十神, 因为是按地支藏干算的, 所以返回TenGod实例列表
+取得地支十神, 因为是按地支藏干算的, 所以返回[**TenGod**](../../api/tenGod.md)实例列表
 
 ```typescript
 /**
@@ -256,7 +258,7 @@ pillar.branchTenGod
 
 ### 四柱神煞
 
-Pillar神煞上包含一个gods属性，可取得该柱所有神煞，返回 C8God实例列表
+四柱对象[**Pillar**](../../api/pillar.md)上包含一个gods属性，可取得该柱所有神煞，返回 [**C8God**](../../api/c8God.md)实例列表
 
 ```typescript
 /**
@@ -264,64 +266,3 @@ Pillar神煞上包含一个gods属性，可取得该柱所有神煞，返回 C8G
  */
 pillar.gods
 ```
-
------
-
-## Char8Ex类
-
-通过 `lunisolar().char8ex(sex: 0 | 1): Char8Ex`取得Char8Ex实例
-
-> 为什么char8ex方法要设置性别参数？
->
-> 因为个别神煞的计算方法男女不同。
-
-| 属性或方法  | 描述 | 参数  | 返回类型 |
-| --- | ---  | --- | --- |
-| me | 取得日主 | | Stem |
-| sexValue | 取得性别值  | | 0 \| 1 |
-| sex | 取得性别 如'乾造' 或 '坤造' | string |
-| year | 取得年柱对象 | | Pillar |
-| month | 取得月柱对象 | | Pillar |
-| day | 取得日柱对象 | | Pillar |
-| hour | 取得时柱对象 | | Pillar |
-| gods | 取得各柱所有神煞 | | {year: C8God[]\, month: C8God[]\, day: C8God[]\, hour: C8God[]} |
-| list | 四柱列表 | [Pillar, Pillar, Pillar, Pillar] |
-| embryo() | 胎元, 返回一个天干地支对象 | SB |
-| ownSign() | 命宫, 返回一个天干地支对象 | SB |
-| bodySign() | 身宫, 返回一个天干地支对象 | SB |
-| toString() | 返回八字的基本信息描述| SB |
-
-## Pillar 四柱类
-
-四柱类是SB类的增强版,主要补充了十神和神煞等属性
-
-| 属性或方法  | 描述 | 参数  | 返回类型 |
-| --- | ---  | --- | --- |
-| gods | 返回该柱所算出的所有神煞 | | C8God[] |
-| stem | 该柱天干  | | Stem |
-| branch | 该柱地支  | | Branch |
-| value | 该天干地支组合的索引值, 范围`[0, 59]` | number |
-| name | 该天干地支组合的字符串, 如 `甲子` | string |
-| takeSound | 取得五行纳音描述 | | string |
-| takeSoundE5 | 取得五行纳音的五行对象 | | Element5 |
-| stemTenGod | 取得天干十神 | | TenGod |
-| branchTenGod | 取得地支十神, 因为是按地支藏干算的, 所以返回提一个列表 | | TenGod[] |
-| missing | 返回旬空地支 | | [Branch, Branch] |
-| toString() | 该天干地支组合的字符串, 等同于name属性 | | string |
-
-## C8God 四柱神煞类
-
-| 属性或方法  | 描述 | 参数  | 返回类型 |
-| --- | ---  | --- | --- |
-| luckLevel | 吉凶等级, 1为吉, -1凶, 0不定 | | number |
-| key | 该神煞的key(以繁体中文神煞名作为key)  | | string |
-| name | 该神煞名  | | string |
-| toString() | 该天干地支组合的字符串, 等同于name属性 | | string |
-
-## TenGod 十神类
-
-| 属性或方法  | 描述 | 参数  | 返回类型 |
-| --- | ---  | --- | --- |
-| key | 该十神的key(以繁体中文神煞名作为key)  | | string |
-| name | 该十神名称   | | string |
-| toString() | 该天干地支组合的字符串, 等同于name属性 | | string |

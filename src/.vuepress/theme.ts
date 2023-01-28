@@ -59,7 +59,7 @@ export default hopeTheme({
       include: true,
       katex: true,
       mark: false,
-      mermaid: false,
+      mermaid: true,
       // playground: {
       //   presets: ["ts", "vue"],
       // },

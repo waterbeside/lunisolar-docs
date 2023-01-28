@@ -1,6 +1,6 @@
 # 公历
 
-通过lunisolar()函数创建Lunisolar后，可以取得一些基本的公历时间相关值
+通过lunisolar()函数创建[**Lunisolar**](../../api/lunisolarClass.md)后，可以取得一些基本的公历时间相关值
 
 ## 取值
 

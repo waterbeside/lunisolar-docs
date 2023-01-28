@@ -3,7 +3,7 @@
 
 ## lunisolar()
 
-通过**lunisolar()** 函数创建一个 **Lunisolar**实例对象：
+通过**lunisolar()** 函数创建一个 [**Lunisolar**](../../api/lunisolarClass.md)实例对象：
 
 ```typescript
 lunisolar(date?: string | number | Date | Lunisolar, config?: ConfigType): Lunisolar

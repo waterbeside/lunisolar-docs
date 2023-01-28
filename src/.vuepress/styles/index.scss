@@ -30,11 +30,14 @@ html[data-theme=light] {
   }
   h1 {
     font-family: 'Quotes, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;';
-    font-size: 76px;
+    font-size: 75px;
     background-image: linear-gradient(315deg,#d34242 25%,#ffb405);
     background-clip: text;
     color: transparent;
     font-weight: 900;
+    @media screen and (max-width: 768px) {
+      font-size: 50px;
+    }
 
   }
   .description, h1 {
@@ -78,5 +81,35 @@ html[data-theme=light] {
     color: var(--white);
     background-color: $primary-color;
   }
+  
+}
+
+.mermaid-wrapper {
+  .node {
+    rect, circle {
+      fill: rgb(247, 175, 170) !important;
+      stroke: rgb(200, 69, 60) !important;
+    }
+  }
+  
+  .edgeLabel {
+    background-color: #eee !important;
+    color: #666 !important;
+  }
+}
+
+html[data-theme=dark] {
+  .mermaid-wrapper {
+    .node {
+      rect, circle {
+        fill: rgb(239, 105, 96) !important;
+      }
+    }
+    .edgeLabel {
+      background-color: #333 !important;
+      color: #aaa !important;
+    }
+  }
+  
   
 }

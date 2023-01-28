@@ -1,6 +1,6 @@
 # 地支
 
-通过SB实例的branch属性可取得天干对象Branch
+通过SB实例的branch属性可取得天干对象[**Branch**](../../api/branch.md)
 
 ```typescript
 // 例如，取得年柱的地支

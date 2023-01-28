@@ -1,5 +1,9 @@
 # 前言
 
+## * 简介
+
+**lunisolar.js**是一个专业的农历js工具库。支持各类农历信息查询，如天干地支、五行纳音、神煞宜忌、建除十二神、八字十神、四柱神煞、胎神占方、每日吉时、每日吉神方等。使用Typescript编写，主体代码压缩后只有11.5KB左右。简单易上手。
+
 ## * 为何制作此库
 
 昔见不同版本日历（包括纸质日历和各类日历软件），其所示宜忌有所不同，更有相矛盾者，不知如何取用，故疑其推算依据是否误，本着宏扬传统文化之精神，查阅各资料文案，以制此库。
@@ -70,3 +74,30 @@
 ## * 其它
 
 [moment.js](https://github.com/moment/moment) 和 [dayjs](https://github.com/iamkun/dayjs) 是两个比较出名的时间工具库，为了符合大家的使用习惯，`lunisolar`针对公历（格里历）的部分操作将会尽量向`dayjs`看齐，并参考了其代码设计，但并不会cover它们的所有功能，如果你仅仅是对公历进行操作，推荐使用**dayjs**。lunisolar重点在于农历部分，例如`Lunisolar`的`format`方法和`diff`方法包含`dayjs`这两个方法的功能并与之保持一致，同时加入了对农历的处理，具体功能及使用请继续阅读文档。
+
+## 对象关系参考
+
+lunisloar采用面向对象开发，下图可以帮助了解各个对象关系。
+
+```mermaid
+flowchart TD
+    lunisolar((lunisolar))--创建Lunisolar实例-->lsr([Lunisolar])
+
+    lsr--八字-->Char8
+    lsr--阴历-->Lunar
+    lsr--节气-->SolarTerm
+    lsr--神煞宜忌/插件-->TheGods
+
+    Char8--year/month/day/hour取得四柱对象-->SB
+    SB-->Stem
+    SB-->Branch
+    Stem--e5-->Element5
+    Stem--纳甲-->Trigram8
+    Branch--e5-->Element5
+    Branch--地支藏干-->Stem
+    Branch--相冲相刑相合等-->Branch
+    Char8--日主--> Stem
+
+    TheGods--取神煞-->God
+    TheGods--吉神方-->Direction24
+```

@@ -6,7 +6,6 @@ import { backToTopPlugin } from "@vuepress/plugin-back-to-top";
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2"
 
 
-
 export default defineUserConfig({
   base: "/lunisolar-docs/",
   title: "Lunisolar",

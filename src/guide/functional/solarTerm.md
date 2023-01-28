@@ -10,7 +10,7 @@
 
 ## 取得当前节气
 
-返回当前日期的节气对象，如果不是节气，返回null
+返回当前日期的节气对象 [**SolarTerm**](../../api/solarTerm.md)，如果不是节气，返回null
 
 ```typescript
 /**

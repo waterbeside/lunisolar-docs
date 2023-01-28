@@ -7,7 +7,7 @@
 
 :::
 
-Lunisolar实例上包含一个**lunar**属性，该属返回一个**Lunar**实例可以此取得各项阴历数据
+Lunisolar实例上包含一个**lunar**属性，该属返回一个[**Lunar**](../.../api/lunar.md)实例可以此取得各项阴历数据
 
 ```typescript
 lunisolar().lunar: Lunar

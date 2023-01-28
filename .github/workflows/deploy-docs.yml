@@ -18,28 +18,28 @@ jobs:
           # 如果你文档需要 Git 子模块，取消注释下一行
           # submodules: true
 
-      - name: 安装 pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7
           run_install: true
 
 
-      - name: 设置 Node.js
+      - name: Set Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           cache: pnpm
 
 
-      - name: 构建文档
+      - name: Build
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
           pnpm run docs:build
           > src/.vuepress/dist/.nojekyll
 
-      - name: 部署文档
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

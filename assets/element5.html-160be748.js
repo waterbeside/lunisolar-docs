@@ -1,0 +1,27 @@
+import{_ as n,V as s,W as a,Z as e}from"./framework-54e49b68.js";const t={},i=e(`<h1 id="五行" tabindex="-1"><a class="header-anchor" href="#五行" aria-hidden="true">#</a> 五行</h1><p>天干对象或地支对象都有e5属性，返回一个五行实例: <strong>Element5</strong></p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token comment">// 例如，取得日柱天干的五行</span>
+<span class="token keyword">const</span> e5 <span class="token operator">=</span> <span class="token function">lunisolar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>char8<span class="token punctuation">.</span>day<span class="token punctuation">.</span>stem<span class="token punctuation">.</span>e5
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="五行名" tabindex="-1"><a class="header-anchor" href="#五行名" aria-hidden="true">#</a> 五行名</h2><p>取得五行名称，如 &#39;木&#39;</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@return</span> <span class="token punctuation">{</span>string<span class="token punctuation">}</span>
+ */</span>
+e5<span class="token punctuation">.</span>name
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="五行索引" tabindex="-1"><a class="header-anchor" href="#五行索引" aria-hidden="true">#</a> 五行索引</h2><p>取得五行索引，范围[0, 4], 依次为&#39;木、火、土、金、水&#39;,</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@return</span> <span class="token punctuation">{</span>number<span class="token punctuation">}</span>
+ */</span>
+e5<span class="token punctuation">.</span>value
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="相生" tabindex="-1"><a class="header-anchor" href="#相生" aria-hidden="true">#</a> 相生</h2><p>取得<strong>相生</strong>（我生者）的五行</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@return</span> <span class="token punctuation">{</span>Element5<span class="token punctuation">}</span>
+ */</span>
+e5<span class="token punctuation">.</span><span class="token function">generating</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="相克" tabindex="-1"><a class="header-anchor" href="#相克" aria-hidden="true">#</a> 相克</h2><p>取得<strong>相克</strong>（我克者）的五行</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@return</span> <span class="token punctuation">{</span>Element5<span class="token punctuation">}</span>
+ */</span>
+e5<span class="token punctuation">.</span><span class="token function">overcoming</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="相泄" tabindex="-1"><a class="header-anchor" href="#相泄" aria-hidden="true">#</a> 相泄</h2><p>取得<strong>相泄</strong>（生我者）的五行</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@return</span> <span class="token punctuation">{</span>Element5<span class="token punctuation">}</span>
+ */</span>
+e5<span class="token punctuation">.</span><span class="token function">weakening</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="相侮" tabindex="-1"><a class="header-anchor" href="#相侮" aria-hidden="true">#</a> 相侮</h2><p>取得<strong>相侮</strong>（克我者）的五行</p><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@return</span> <span class="token punctuation">{</span>Element5<span class="token punctuation">}</span>
+ */</span>
+e5<span class="token punctuation">.</span><span class="token function">counteracting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,21),c=[i];function p(l,d){return s(),a("div",null,c)}const r=n(t,[["render",p],["__file","element5.html.vue"]]);export{r as default};

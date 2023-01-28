@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url=/lunisolar-docs/zh/guide/about.html">
+  <link rel="canonical" href="/lunisolar-docs/zh/guide/about.html">
+  <title>Redirecting...</title>
+  <script>
+    const anchor = window.location.hash.substr(1);
+    location.href = `/lunisolar-docs/zh/guide/about.html${anchor?`#${anchor}`:""}`;
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>

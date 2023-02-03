@@ -1,25 +1,25 @@
-import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { hopeTheme } from 'vuepress-theme-hope'
+import { enNavbar, zhNavbar } from './navbar/index.js'
+import { enSidebar, zhSidebar } from './sidebar/index.js'
 
 export default hopeTheme({
-  hostname: "https://waterbeside.github.com",
+  hostname: 'https://waterbeside.github.com',
 
   author: {
-    name: "Waterbeside",
-    url: "https://github.com/waterbeside",
+    name: 'Waterbeside',
+    url: 'https://github.com/waterbeside'
   },
 
   // iconAssets: "iconfont",
-  iconAssets: "//at.alicdn.com/t/c/font_3869282_wrxk4fhonc.css",
+  iconAssets: '//at.alicdn.com/t/c/font_3869282_wrxk4fhonc.css',
 
-  logo: "/logo.png",
+  logo: '/logo.png',
 
-  repo: "waterbeside/lunisolar",
+  repo: 'waterbeside/lunisolar',
 
-  docsRepo: "waterbeside/lunisolar-docs",
+  docsRepo: 'waterbeside/lunisolar-docs',
 
-  docsDir: "/src",
+  docsDir: '/src',
 
   // navbar
   navbar: zhNavbar,
@@ -27,7 +27,7 @@ export default hopeTheme({
   // sidebar
   sidebar: zhSidebar,
 
-  footer: "默认页脚",
+  footer: '默认页脚',
 
   displayFooter: true,
 
@@ -36,12 +36,10 @@ export default hopeTheme({
 
   // page meta
   metaLocales: {
-    editLink: "在 GitHub 上编辑此页",
+    editLink: '在 GitHub 上编辑此页'
   },
 
   plugins: {
- 
-
     // Disable features you don’t want here
     mdEnhance: {
       align: false,
@@ -64,7 +62,7 @@ export default hopeTheme({
       //   presets: ["ts", "vue"],
       // },
       presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
+        plugins: ['highlight', 'math', 'search', 'notes', 'zoom']
       },
       // stylize: [
       //   {
@@ -83,8 +81,8 @@ export default hopeTheme({
       sup: true,
       tabs: true,
       vPre: false,
-      vuePlayground: false,
-    },
+      vuePlayground: false
+    }
 
     // uncomment these if you want a pwa
     // pwa: {
@@ -142,5 +140,5 @@ export default hopeTheme({
     //     ],
     //   },
     // },
-  },
-});
+  }
+})

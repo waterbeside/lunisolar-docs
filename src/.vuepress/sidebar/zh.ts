@@ -1,12 +1,12 @@
-import { sidebar } from "vuepress-theme-hope";
+import { sidebar } from 'vuepress-theme-hope'
 
 export const zhSidebar = sidebar({
-  "/guide/":  [
+  '/guide/': [
     'about.md',
     'quickStart.md',
     {
-      text: "功能与使用",
-      prefix: "functional/",
+      text: '功能与使用',
+      prefix: 'functional/',
       // children: "structure",
       children: [
         'parse.md',
@@ -18,24 +18,18 @@ export const zhSidebar = sidebar({
         'branch.md',
         'element5.md',
         'format.md',
-        'diff.md',
-      ],
+        'diff.md'
+      ]
     },
     {
-      text: "插件",
-      prefix: "plugins/",
+      text: '插件',
+      prefix: 'plugins/',
       // children: "structure",
-      children: [
-        'about.md',
-        'fetalGod.md',
-        'takeSound.md',
-        'theGods.md',
-        'char8ex.md',
-      ],
+      children: ['about.md', 'fetalGod.md', 'takeSound.md', 'theGods.md', 'char8ex.md']
     },
     'i18n.md'
-  ], 
-  "/api/":  [
+  ],
+  '/api/': [
     'lunisolarFact.md',
     'lunisolarClass.md',
     'lunar.md',
@@ -52,6 +46,6 @@ export const zhSidebar = sidebar({
     'tenGod.md',
     'c8God.md',
     'theGods.md',
-    'god.md',
+    'god.md'
   ]
-});
+})

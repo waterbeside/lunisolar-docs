@@ -1,6 +1,6 @@
 # God 神煞类
 
-（theGods插件）
+<Badge type="info" vertical="middle" text="theGods插件"/>
 
 通过theGods对象所取得的神煞，都是一个God对象，其包含以下属性：
 

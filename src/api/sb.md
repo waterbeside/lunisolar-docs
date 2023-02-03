@@ -10,5 +10,5 @@
 | toString()     | 返回格式化后天干地支字符串如 “壬寅” | | string |
 | missing | 取得旬空的地支 | | [Branch, Branch] |
 | takeSound | 五行纳音，需加载`takeSound`插件, 参考 [纳音](../guide/plugins/takeSound.md) | | string |
-| **静态方法**   static method| | |  |
+| --- | **静态方法** static method | --- | ---  |
 | getNames()     | 取得六十干支符串列表 | | string[] |

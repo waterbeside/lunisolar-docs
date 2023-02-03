@@ -8,5 +8,5 @@
 | trigram8 | 纳甲配卦 | | [Trigram8](./trigram8.md) |
 | valueOf()      | 返回天干索引值 | | number |
 | toString()     | 返回天干字符串| | string |
-| **静态方法**   static method| | |  |
+| --- | **静态方法** static method | --- | ---  |
 | getNames()     | 返回所有天干字符串列表| | string[] |

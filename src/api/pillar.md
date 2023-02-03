@@ -1,6 +1,8 @@
 # Pillar 四柱类
 
-(char8ex插件)
+<Badge type="info" vertical="middle" text="char8ex插件"/>
+<Badge type="warn" vertical="middle" text="v2.0.0+"/>
+
 
 四柱类是SB类的增强版,主要补充了十神和神煞等属性
 

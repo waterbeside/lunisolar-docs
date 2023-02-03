@@ -1,6 +1,7 @@
 # C8God 四柱神煞类
 
-(char8ex插件)
+<Badge type="info" vertical="middle" text="char8ex插件"/>
+<Badge type="warn" vertical="middle" text="v2.0.0+"/>
 
 | 属性或方法  | 描述 | 参数  | 返回类型 |
 | --- | ---  | --- | --- |

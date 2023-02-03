@@ -6,7 +6,7 @@
 | name | 取得节气名称  | | string |
 | valueOf()      | 返回节气索引值 | | number |
 | toString()     | 返回节气字符串| | string |
-| **静态方法**   static method| | |  |
+| **静态方法** static method  | | --- | ---  |
 | getNames()     | 返回节气字符串列表| | string[] |
 | getYearTermDayList(year)   | 取得某年的节气日期列表| -  **year**: *number* <br> 指定某年 | number[] |
 | getMonthTerms(year, month)   | 取得某年某月的两个节气的日期 | - **year**: *number* <br> 指定某年<br> - **month**: *number*<br> 某月 (1 ~ 12) | [number,number] |

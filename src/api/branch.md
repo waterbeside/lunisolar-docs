@@ -17,5 +17,5 @@
 | harming | 相害的地支 | | Branch |
 | valueOf()      | 返回地支索引值 | | number |
 | toString()     | 返回地支字符串| | string |
-| **静态方法**   static method| | |  |
+| --- | **静态方法** static method | --- | ---  |
 | getNames()     | 返回所有地支字符串列表| | string[] |

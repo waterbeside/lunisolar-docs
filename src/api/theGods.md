@@ -1,7 +1,7 @@
 
 # TheGods 神煞宜忌类
 
-（theGods插件）
+<Badge type="info" vertical="middle" text="theGods插件"/>
 
 | 属性或方法  | 描述 | 参数  | 返回类型 |
 | --- | ---  | --- | --- |

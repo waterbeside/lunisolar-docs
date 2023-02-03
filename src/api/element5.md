@@ -10,5 +10,5 @@
 | counteracting() | 取得**相侮**（克我者）的五行，如实例为`木`，则返回实例为`金`的Element5对象 | |Element5 |
 | valueOf()      | 返回五行属性索引值 | | number |
 | toString()     | 返回五行属性字符串| | string |
-| **静态方法**   static method| | |  |
+| --- | **静态方法** static method | --- | ---  |
 | getNames()     | 返回天干字符串列表| | string[] |

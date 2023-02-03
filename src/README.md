@@ -60,6 +60,3 @@ footer: MIT Licensed | Copyright © 2022-present Natron Kan (waterbeside)
   
 
 ---
-
-
-<Logo3D />

@@ -5,7 +5,7 @@ import theme from './theme.js'
 // import { redirectPlugin } from "vuepress-plugin-redirect";
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import fullTextSearchPlugin from 'vuepress-plugin-full-text-search2'
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+// import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { fileURLToPath } from 'url'
 import path from 'path'
 
@@ -28,11 +28,11 @@ export default defineUserConfig({
   plugins: [
     fullTextSearchPlugin() as Plugin,
     backToTopPlugin(),
-    registerComponentsPlugin({
-      components: {
-        Logo3D: path.resolve(__dirname, './components/Logo3D.vue')
-      }
-    })
+    // registerComponentsPlugin({
+    //   components: {
+    //     Logo3D: path.resolve(__dirname, './components/Logo3D.vue')
+    //   }
+    // })
     // redirectPlugin({
     //   config: {
     //     '/zh/index.html': '/index.html',

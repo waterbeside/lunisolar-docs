@@ -6,6 +6,7 @@ on:
       - dev
     paths:
       - "src/**"
+      - ".github/workflows/deploy-docs.yml"
 
 jobs:
   build-and-deploy:

@@ -47,5 +47,12 @@ export const zhSidebar = sidebar({
     'c8God.md',
     'theGods.md',
     'god.md'
+  ],
+  '/reference/': [
+    'stemBranch.md',
+    'takeSound.md',
+    'trigram8.md',
+    'direction24.md',
+    'fetalGod.md',
   ]
 })

@@ -4,10 +4,14 @@ $primary-color: #df451b;
 html[data-theme=dark] {
   --bg-color: #212121;
   --sidebar-bg-color: #202020;
+  --table-border-color: rgb(65, 63, 63);
+  --table-even-bg-color: #111;
 }
 
 html[data-theme=light] {
   --bg-color: #fcfcfc;
+  --table-border-color: #ddd;
+  --table-even-bg-color: #f6f6f5;
 }
 
 .suggestions {
@@ -112,4 +116,15 @@ html[data-theme=dark] {
   }
   
   
+}
+
+table {
+  tr:nth-child(even) {
+    td {
+      background-color: var(--table-even-bg-color);
+    }
+  }
+  td, th {
+    border-color: var(--table-border-color)
+  }
 }

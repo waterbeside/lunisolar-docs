@@ -1,11 +1,23 @@
 
 # 天干
 
+## 取得天干实例
+
 通过SB实例的stem属性可取得天干对象[**Stem**](../../api/stem.md)
 
 ```typescript
 // 例如，取得年柱的天干
 const stem = lunisolar().char8.year.stem
+```
+
+或者可以直接创建天干实例
+
+```typescript
+// 创建方法
+lunisolar.Stem.create(value: number, config?: { lang: string})
+
+// 例，创建天干为‘乙’的实例，传入其序号1即可
+const stem = lunisolar.Stem.create(1)
 ```
 
 ## 天干名

@@ -1,10 +1,22 @@
 # 地支
 
+## 取得地支实例
+
 通过SB实例的branch属性可取得天干对象[**Branch**](../../api/branch.md)
 
 ```typescript
 // 例如，取得年柱的地支
 const branch = lunisolar().char8.year.branch
+```
+
+或者可以直接创建地支实例
+
+```typescript
+// 创建方法
+lunisolar.Branch.create(value: number, config?: { lang: string})
+
+// 例，创建地支为‘子’的实例，传入子的地支序号0即可
+const branch = lunisolar.Branch.create(0)
 ```
 
 ## 地支名

@@ -23,7 +23,7 @@ jobs:
           node-version: 16
       
       - name: Change npm config
-        run: pnpm config set registry https://registry.npmmirror.com
+        run: npm config set registry https://registry.npmmirror.com
   
       - name: Install pnpm
         uses: pnpm/action-setup@v2

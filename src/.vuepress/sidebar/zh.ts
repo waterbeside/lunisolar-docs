@@ -54,5 +54,7 @@ export const zhSidebar = sidebar({
     'trigram8.md',
     'direction24.md',
     'fetalGod.md',
+    'gods.md',
+    'acts.md',
   ]
 })

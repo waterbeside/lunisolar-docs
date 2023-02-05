@@ -1,1 +1,0 @@
-import{_ as t,V as n,W as s,X as e,Y as a}from"./framework-54e49b68.js";const c={},r=e("h1",{id:"插件-plugins",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#插件-plugins","aria-hidden":"true"},"#"),a(" 插件 plugins")],-1),o=[r];function i(_,d){return n(),s("div",null,o)}const h=t(c,[["render",i],["__file","index.html.vue"]]);export{h as default};

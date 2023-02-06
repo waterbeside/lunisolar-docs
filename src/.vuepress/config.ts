@@ -11,10 +11,10 @@ import path from 'path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineUserConfig({
-  base: '/lunisolar-docs/',
+  base: '/',
   title: 'Lunisolar',
   head: [
-    ['link', { rel: 'icon', href: '/lunisolar-docs/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { description: 'lunisolar.js 是一个以Typescript编写的专业的农历库， 农历库，支持阴历公历互转，支持各类黄历数据查询，如八字四柱、阴历、神煞宜忌、建除十二神、胎神占方、吉神方位、五行纳音等。支持自定义插件。'}]
   ],
   theme,

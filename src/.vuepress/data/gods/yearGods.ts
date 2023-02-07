@@ -2,37 +2,12 @@ import { cyclicNum } from '../utils'
 
 export const yearGods = {
   // 年神随岁干起者
-  '年神随岁干起者': {
-    歲德: [
-      '06284',
-      'stem',
-      'branch',
-      8,
-    ],
-    歲德合: [
-      '51739',
-      'stem',
-      'branch',
-      8,
-    ],
-    歲祿: [
-      [2, 3, 5, 6, 5, 6, 8, 9, 11, 0],
-      'stem',
-      'branch',
-      8,
-    ],
-    陽貴: [
-      [7, 8, 9, 11, 1, 0, 1, 2, 3, 5],
-      'stem',
-      'branch',
-      8
-    ],
-    陰貴: [
-      [1, 0, 11, 9, 7, 8, 7, 6, 5, 3],
-      'stem',
-      'branch',
-      8
-    ],
+  年神随岁干起者: {
+    歲德: ['06284', 'stem', 'branch', 8],
+    歲德合: ['51739', 'stem', 'branch', 8],
+    歲祿: [[2, 3, 5, 6, 5, 6, 8, 9, 11, 0], 'stem', 'branch', 8],
+    陽貴: [[7, 8, 9, 11, 1, 0, 1, 2, 3, 5], 'stem', 'branch', 8],
+    陰貴: [[1, 0, 11, 9, 7, 8, 7, 6, 5, 3], 'stem', 'branch', 8],
     金神: [
       [
         [6, 7, 8, 9],
@@ -44,16 +19,11 @@ export const yearGods = {
       'stem',
       'branch',
       -8
-    ],
+    ]
   },
   年神随岁干取纳甲卦变者: {
     // 主虚耗之事，犯之主财物耗散
-    破敗五鬼: [
-      [6, 4, 0, 1, 5, 2, 3, 7, 6, 4],
-      'stem',
-      'Trigram8',
-      -8
-    ],
+    破敗五鬼: [[6, 4, 0, 1, 5, 2, 3, 7, 6, 4], 'stem', 'Trigram8', -8],
     陰府太歲: [
       [
         [2, 6],
@@ -65,7 +35,7 @@ export const yearGods = {
       'stem',
       'Trigram8',
       -8
-    ],
+    ]
   },
   年神随岁支顺行者: {
     // 年神隨支順行者
@@ -83,7 +53,7 @@ export const yearGods = {
     白虎: [cyclicNum(8, 0, 11), 'branch', 'branch', -8],
     福德: [cyclicNum(9, 0, 11), 'branch', 'branch', 8],
     吊客: [cyclicNum(10, 0, 11), 'branch', 'branch', -8],
-    病符: [cyclicNum(11, 0, 11), 'branch', 'branch', -8],
+    病符: [cyclicNum(11, 0, 11), 'branch', 'branch', -8]
     // 巡山羅㬋: [],
   },
   年神随岁支退行者: {
@@ -95,7 +65,7 @@ export const yearGods = {
     傳送: [cyclicNum(8, 0, 11, true), 'branch', 'branch', 8],
     河魁: [cyclicNum(10, 0, 11, true), 'branch', 'branch', -8],
     六害: [cyclicNum(7, 0, 11, true), 'branch', 'branch', -8],
-    五鬼: [cyclicNum(4, 0, 11, true), 'branch', 'branch', -8],
+    五鬼: [cyclicNum(4, 0, 11, true), 'branch', 'branch', -8]
   },
 
   年神从岁支三合者: {
@@ -107,32 +77,37 @@ export const yearGods = {
     災煞: [[6, 3, 0, 9], 'branch', 'branch', -8],
     歲煞: [[7, 4, 1, 10], 'branch', 'branch', -8],
     伏兵: [[2, 0, 8, 6], 'branch', 'branch', -8],
-    大禍: [[3, 1, 9, 7],  'branch', 'branch', -8],
+    大禍: [[3, 1, 9, 7], 'branch', 'branch', -8],
     坐煞: [
       [
         [2, 3],
         [0, 1],
         [8, 9],
         [6, 7]
-      ], 'branch', 'stem', -8
+      ],
+      'branch',
+      'stem',
+      -8
     ],
-    向煞:[
+    向煞: [
       [
         [8, 9],
         [6, 7],
         [2, 3],
         [0, 1]
-      ], 'branch', 'stem', -8
+      ],
+      'branch',
+      'stem',
+      -8
     ],
     天官符: [[11, 8, 5, 2], 'branch', 'branch', 8],
     大煞: [[0, 9, 6, 3], 'branch', 'branch', -8],
-    黃幡: [[4, 1, 10, 7],'branch', 'branch', 8],
-    豹尾: [[10, 7, 4, 1],'branch', 'branch', 8],
-    灸退: [[3, 0, 9, 6],'branch', 'branch', 8],
+    黃幡: [[4, 1, 10, 7], 'branch', 'branch', 8],
+    豹尾: [[10, 7, 4, 1], 'branch', 'branch', 8],
+    灸退: [[3, 0, 9, 6], 'branch', 'branch', 8]
   },
   年神随岁支顺行一方者: {
     // 年神隨歲支順行一方者
-    飛廉: [[8, 9, 10, 5, 6, 7, 2, 3, 4, 11, 0, 1],'branch', 'branch', -8]
-  } 
-  
+    飛廉: [[8, 9, 10, 5, 6, 7, 2, 3, 4, 11, 0, 1], 'branch', 'branch', -8]
+  }
 }

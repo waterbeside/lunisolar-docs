@@ -1,4 +1,3 @@
-
 <script lang="ts" setup>
 import zh from 'lunisolar/locale/zh'
 import en from 'lunisolar/locale/en'
@@ -11,7 +10,7 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const list: {name: string, value: number}[] = []
+const list: { name: string; value: number }[] = []
 
 if (props.flag === 'stem') {
   for (let i = 0; i < 10; i++) {
@@ -47,22 +46,21 @@ if (props.flag === 'stem') {
     const listItem = {
       value: i,
       name: zh.stems[stemValue] + zh.branchs[branchValue],
-      nameEn: en.stems[stemValue] + '-' + en.branchs[branchValue],
+      nameEn: en.stems[stemValue] + '-' + en.branchs[branchValue]
     }
     list.push(listItem)
   }
 }
 
-
-const fields = [{name: 'value'}, {name: 'name'}, {name: 'nameEn'}]
+const fields = [{ name: 'value' }, { name: 'name' }, { name: 'nameEn' }]
 const idField = 'value'
 
 if (['branch', 'stem'].includes(props.flag)) {
-  fields.push({name: 'e5'})
+  fields.push({ name: 'e5' })
 }
 
 if (props.flag === 'branch') {
-  fields.push({name: 'zd'})
+  fields.push({ name: 'zd' })
 }
 
 const colCount = computed<number>(() => {
@@ -73,18 +71,16 @@ const colCountXs = computed<number>(() => {
   if (props.flag === 'stem') return 5
   return 6
 })
-
 </script>
 
-
 <template>
-<OrderGrid
-  :fields="fields"
-  :datas="list"
-  :idField="idField"
-  :colCount="colCount"
-  :colCountXs="colCountXs"
- />
+  <OrderGrid
+    :fields="fields"
+    :datas="list"
+    :id-field="idField"
+    :col-count="colCount"
+    :col-count-xs="colCountXs"
+  />
 </template>
 
 <style lang="scss" scoped>

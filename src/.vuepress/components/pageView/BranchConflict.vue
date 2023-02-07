@@ -1,4 +1,3 @@
-
 <script lang="ts" setup>
 import lunisolar from 'lunisolar'
 import DataTable from '../common/DataTable.vue'
@@ -27,27 +26,19 @@ for (let i = 0; i < 12; i++) {
 }
 
 const fields = [
-  {name: 'branch', title: '地支'},
-  {name: 'conflict', title: '冲'},
-  {name: 'destroying', title: '破'},
-  {name: 'punishing', title: '刑'},
-  {name: 'harming', title: '害'},
-  {name: 'g6', title: '六合'}
+  { name: 'branch', title: '地支' },
+  { name: 'conflict', title: '冲' },
+  { name: 'destroying', title: '破' },
+  { name: 'punishing', title: '刑' },
+  { name: 'harming', title: '害' },
+  { name: 'g6', title: '六合' }
 ]
 
 const idField = 'branch'
-
-
 </script>
 
-
 <template>
-<DataTable
-  :fields="fields"
-  :datas="list"
-  :idField="idField"
- />
+  <DataTable :fields="fields" :datas="list" :id-field="idField" />
 </template>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

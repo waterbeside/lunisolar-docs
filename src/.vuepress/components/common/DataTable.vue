@@ -22,18 +22,18 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <table class="dataTable">
     <thead v-if="isShowHead">
-    <tr>
-      <th v-for="field in fields" :key="field.name" :style="{width:field.width || 'auto'}">
-       {{ field.title ?? field.name }}
-      </th>
-    </tr>
+      <tr>
+        <th v-for="field in fields" :key="field.name" :style="{ width: field.width || 'auto' }">
+          {{ field.title ?? field.name }}
+        </th>
+      </tr>
     </thead>
     <tbody>
-    <tr v-for="data, index in props.datas" :key="props.idField ? data[props.idField] : index">
-      <td v-for="field in fields">
-        {{ data[field.name] }}
-      </td>
-    </tr>
+      <tr v-for="(data, index) in props.datas" :key="props.idField ? data[props.idField] : index">
+        <td v-for="field in fields">
+          {{ data[field.name] }}
+        </td>
+      </tr>
     </tbody>
   </table>
 </template>

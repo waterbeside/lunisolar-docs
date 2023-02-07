@@ -66,6 +66,6 @@ export const zhSidebar = sidebar({
         'godsDesc.md'
       ]
     },
-    'acts.md',
+    'acts.md'
   ]
 })

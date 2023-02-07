@@ -1,10 +1,10 @@
-import lunisolar, {Branch, Stem} from 'lunisolar'
+import lunisolar, { Branch, Stem } from 'lunisolar'
 
-export const cyclicNum = (offset: number, min: number, max: number, isDesc: boolean = false): number[] => {
+export const cyclicNum = (offset: number, min: number, max: number, isDesc = false): number[] => {
   const len = max - min + 1
   const nums = new Array(len)
   for (let i = 0; i < len; i++) {
-    let item = isDesc ? (offset + len - i) % len : (offset + len + 1) % len
+    const item = isDesc ? (offset + len - i) % len : (offset + len + 1) % len
     nums.push(item)
   }
   return nums
@@ -17,10 +17,9 @@ export const by12Orders = (offset: number): number[] => {
   })
 }
 
-
 type StemsAndBranchs = { stem: Stem[]; branch: Branch[] }
 
-export const getDirection24List = (lang: string = 'zh') => {
+export const getDirection24List = (lang = 'zh') => {
   const config = {
     lang
   }
@@ -53,7 +52,6 @@ export const getDirection24List = (lang: string = 'zh') => {
   return res
 }
 
-
 // 取得月厌位所在的24山的索引值
 export const getMonthHateAtDrt24 = (branchValue: number): number => {
   // [0, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
@@ -63,7 +61,7 @@ export const getMonthHateAtDrt24 = (branchValue: number): number => {
 // 取得厌前厌后
 export const getHateFrontAndBack = (
   branchValue: number,
-  lang: string = 'zh'
+  lang = 'zh'
 ): [StemsAndBranchs, StemsAndBranchs] => {
   const hate = getMonthHateAtDrt24(branchValue) // 月厌位
   const hateOp = (hate + 12) % 24 // 厌对位

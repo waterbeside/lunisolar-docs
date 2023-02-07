@@ -24,9 +24,17 @@ const colCountXs = computed(() => {
 </script>
 
 <template>
-  <div class="orderGrid" :style="{'--col-count': props.colCount, '--col-count-xs': colCountXs}">
-    <div class="orderGrid__item" v-for="data, index in datas" :key="props.idField ? data[props.idField] : index">
-      <div class="orderGrid__field-item" :class="`orderGrid__field-item--${field.name}`" v-for="field in fields">
+  <div class="orderGrid" :style="{ '--col-count': props.colCount, '--col-count-xs': colCountXs }">
+    <div
+      v-for="(data, index) in datas"
+      :key="props.idField ? data[props.idField] : index"
+      class="orderGrid__item"
+    >
+      <div
+        v-for="field in fields"
+        class="orderGrid__field-item"
+        :class="`orderGrid__field-item--${field.name}`"
+      >
         {{ data[field.name] }}
       </div>
     </div>

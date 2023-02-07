@@ -54,7 +54,18 @@ export const zhSidebar = sidebar({
     'trigram8.md',
     'direction24.md',
     'fetalGod.md',
-    'gods.md',
+    {
+      text: '吉凶神煞',
+      prefix: 'gods/',
+      children: [
+        {
+          text: '立成',
+          prefix: 'godBuilder/',
+          children: ['yearGods.md', 'monthGods.md', 'dayGods.md', 'hourGods.md']
+        },
+        'godsDesc.md'
+      ]
+    },
     'acts.md',
   ]
 })

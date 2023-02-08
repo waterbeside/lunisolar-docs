@@ -1,0 +1,1 @@
+import{_ as s,V as t,W as c,X as e,Y as o}from"./framework-b070b9df.js";const a={},n=e("h1",{id:"神煞吉凶",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#神煞吉凶","aria-hidden":"true"},"#"),o(" 神煞吉凶")],-1),r=e("p",null,"...编撰中",-1),_=[n,r];function d(i,l){return t(),c("div",null,_)}const f=s(a,[["render",d],["__file","godsDesc.html.vue"]]);export{f as default};

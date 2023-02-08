@@ -1,11 +1,12 @@
 import lunisolar, { Branch, Stem } from 'lunisolar'
+// import type { Branch, Stem}
 
 export const cyclicNum = (offset: number, min: number, max: number, isDesc = false): number[] => {
   const len = max - min + 1
   const nums = new Array(len)
   for (let i = 0; i < len; i++) {
-    const item = isDesc ? (offset + len - i) % len : (offset + len + 1) % len
-    nums.push(item)
+    const item = isDesc ? (offset + len - i) % len : (offset + len + i) % len
+    nums[i] = item
   }
   return nums
 }
@@ -76,11 +77,11 @@ export const getHateFrontAndBack = (
       (hate > hateOp && i < hate && i > hateOp) ||
       (hate < hateOp && ((0 <= i && i < hate) || (hateOp < i && i <= 23)))
     ) {
-      if (item instanceof Stem) yang.stem.push(item)
-      if (item instanceof Branch) yang.branch.push(item)
+      if (item instanceof lunisolar.Stem) yang.stem.push(item)
+      if (item instanceof lunisolar.Branch) yang.branch.push(item)
     } else {
-      if (item instanceof Stem) ying.stem.push(item)
-      if (item instanceof Branch) ying.branch.push(item)
+      if (item instanceof lunisolar.Stem) ying.stem.push(item)
+      if (item instanceof lunisolar.Branch) ying.branch.push(item)
     }
   }
   return [yang, ying]

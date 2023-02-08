@@ -3,8 +3,8 @@ import { cyclicNum } from '../utils'
 export const yearGods = {
   // 年神随岁干起者
   年神随岁干起者: {
-    歲德: ['06284', 'stem', 'branch', 8],
-    歲德合: ['51739', 'stem', 'branch', 8],
+    歲德: ['06284'.split(''), 'stem', 'stem', 8],
+    歲德合: ['51739'.split(''), 'stem', 'stem', 8],
     歲祿: [[2, 3, 5, 6, 5, 6, 8, 9, 11, 0], 'stem', 'branch', 8],
     陽貴: [[7, 8, 9, 11, 1, 0, 1, 2, 3, 5], 'stem', 'branch', 8],
     陰貴: [[1, 0, 11, 9, 7, 8, 7, 6, 5, 3], 'stem', 'branch', 8],

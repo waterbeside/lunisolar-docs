@@ -9,8 +9,8 @@ import {
 export const monthGods = {
   月神取月建三合者: {
     // 月神取月建三合者
-    天德: [[9, 17, 13, 15, 23, 19, 20, 5, 1, 3, 11, 7], 'branch', 'direction24', 4],
-    天德合: [[8, 1, 8, 5, 3, 2, 2, 5, 4, 11, 7, 6], 'branch', 'stem', 4],
+    天德: [[9, 17, 13, 15, 23, 19, 21, 5, 1, 3, 11, 7], 'branch', 'direction24', 4],
+    天德合: [[null, 1, 8, null, 3, 2, null, 5, 4, null, 7, 6], 'branch', 'stem', 4],
     月德: [[8, 6, 2, 0], 'branch', 'stem', 4],
     月德合: [[3, 1, 7, 5], 'branch', 'stem', 4],
     // 按’丙甲壬庚‘顺序，同样是p212页印误
@@ -38,13 +38,14 @@ export const monthGods = {
     臨日: [[4, 9, 6, 11, 8, 1, 10, 3, 0, 5, 2, 7], 'branch', 'branch', 4],
     驛馬: [[2, 11, 8, 5], 'branch', 'branch', 4, ['天后']],
 
-    天火: [[6, 3, 0, 9], 'branch', 'branch', -4],
+    劫煞: [[5, 2, 11, 8], 'branch', 'branch', -4],
+    災煞: [[6, 3, 0, 9], 'branch', 'branch', -4, ['天火']],
     // 月煞又名月虛
-    月煞: [[7, 4, 1, 10], 'branch', 'branch', -4],
+    月煞: [[7, 4, 1, 10], 'branch', 'branch', -4, ['月虛']],
     // 大時又名咸池故又忌取魚、乘船渡水
     大時: [[9, 6, 3, 0], 'branch', 'branch', -4, ['大敗咸池']],
     遊禍: [[11, 8, 5, 2], 'branch', 'branch', -4],
-    天吏: [[3, 0, 9, 6], 'branch', 'branch', -4],
+    天吏: [[3, 0, 9, 6], 'branch', 'branch', -4, ['致死']],
     九空: [[10, 7, 4, 1], 'branch', 'branch', -4],
     // 月刑為月建所傷之地，故所忌與三煞同
     月刑: [[3, 10, 5, 0, 4, 8, 6, 1, 2, 9, 7, 11], 'branch', 'branch', -4]
@@ -84,7 +85,7 @@ export const monthGods = {
         [0, 1]
       ],
       'season',
-      'sttem',
+      'stem',
       4
     ],
     時德: [[6, 4, 0, 2], 'season', 'branch', 4],
@@ -135,7 +136,7 @@ export const monthGods = {
     五墓: [[28, 4, 31, 31, 4, 22, 22, 4, 37, 37, 4, 28], 'branch', 'sb', -4]
   },
   月神随月建三合逆行一方者: {
-    九坎: [[8, 5, 4, 1, 10, 7, 3, 0, 9, 6, 2, 11], 'branch', 'branch', -4]
+    九坎: [[8, 5, 4, 1, 10, 7, 3, 0, 9, 6, 2, 11], 'branch', 'branch', -4, ['九焦']]
   },
   月神随四序行三合者: {
     土符: [[8, 0, 1, 5, 9, 2, 6, 10, 3, 7, 11, 4], 'branch', 'branch', -4]
@@ -157,7 +158,7 @@ export const monthGods = {
         [14, 44]
       ],
       'branch',
-      'branch',
+      'sb',
       -4
     ]
   },
@@ -238,7 +239,7 @@ export const monthGods = {
     // 不将
     不將: [
       (() => {
-        const res = []
+        const res: number[][] = []
         for (let i = 0; i < 12; i++) {
           // 厌前天干配厌后地支即为阴阳不将
           const [front, back] = getHateFrontAndBack(i)
@@ -255,6 +256,7 @@ export const monthGods = {
               resItem.push(computeSBValue(fValue, b.value))
             }
           }
+          res.push(resItem)
         }
         return res
       })(),

@@ -63,14 +63,78 @@ export const hourGods = {
       [
         [[5, 11], [4, 10], [3, 9], null, null, null, null, null, 9, [8, 2], [7, 1], [6, 0]], // 甲
         [[4, 0], [3, 11], [null, 10], [null, 9], null, null, 10, 9, 8, [7, 3], [6, 2], [5, 1]], // 乙
-        [[null, 1], [null,0], [null, 11], [null, 10], null,  [10, null], [9, null], [8, null], [7, null], [6, null], [5, 3], [4, 2]], // 丙
+        [
+          [null, 1],
+          [null, 0],
+          [null, 11],
+          [null, 10],
+          null,
+          [10, null],
+          [9, null],
+          [8, null],
+          [7, null],
+          [6, null],
+          [5, 3],
+          [4, 2]
+        ], // 丙
         [[null, 3], [null, 2], [null, 1], [null, 0], [9, 11], [8], [7], [6], [5], [4], [3], null], // 丁
         [null, null, [9, 3], [8, 2], [7, 1], [6, 0], [5, 11], [4, 10], [3, 9], null, null, null], // 戊
-        [null, [null, 3], [null, 2], [9, 1], [8, 0], [7, 11], [6, 10], [5, null], [4, null], [3, null], null, null], // 已
+        [
+          null,
+          [null, 3],
+          [null, 2],
+          [9, 1],
+          [8, 0],
+          [7, 11],
+          [6, 10],
+          [5, null],
+          [4, null],
+          [3, null],
+          null,
+          null
+        ], // 已
         [null, null, [9, 3], [8, 2], [7, 1], [6, 0], [5, 11], [4, 10], [3, 9], null, null, null], // 庚
-        [null, null, [8, null], [7, 3], [6, 2], [5, 1], [4, 0], [3, 11], [null, 10], [null, 9], null, null], // 辛
-        [null, 8, [7, null], [6, null], [4, 2], [3, 1], [2, 0], [null, 11], [null, 10], [null,9], null], // 壬
-        [[7, 9], [6, 8], [5, null], [4, null], [3, null], [2, null], null, [null,2], [null,1], [null, 0], [9, 11], [8, 10]] // 癸
+        [
+          null,
+          null,
+          [8, null],
+          [7, 3],
+          [6, 2],
+          [5, 1],
+          [4, 0],
+          [3, 11],
+          [null, 10],
+          [null, 9],
+          null,
+          null
+        ], // 辛
+        [
+          null,
+          8,
+          [7, null],
+          [6, null],
+          [4, 2],
+          [3, 1],
+          [2, 0],
+          [null, 11],
+          [null, 10],
+          [null, 9],
+          null
+        ], // 壬
+        [
+          [7, 9],
+          [6, 8],
+          [5, null],
+          [4, null],
+          [3, null],
+          [2, null],
+          null,
+          [null, 2],
+          [null, 1],
+          [null, 0],
+          [9, 11],
+          [8, 10]
+        ] // 癸
       ],
       ['stem', 'branch'],
       'branch',
@@ -101,7 +165,7 @@ export const hourGods = {
           listDict['酉']
         ]
       })(),
-      [{rule: [24, 54, 48, 18, 51, 15, 27, 21, 45, 57], ruleType: 'sb'}, 'branch'],
+      [{ rule: [24, 54, 48, 18, 51, 15, 27, 21, 45, 57], ruleType: 'sb' }, 'branch'],
       'branch',
       1
     ]

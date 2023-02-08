@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import { defineProps, withDefaults } from 'vue'
-// import DataTable from '../common/DataTable.vue'
 import { gods } from '../../data/gods'
-import { getTransList, getTran, FieldsType  } from '../../data/utils'
-
+import { getTransList, getTran, FieldsType } from '../../data/utils'
 
 interface Props {
   godType: 'year' | 'month' | 'day' | 'hour'
@@ -33,8 +31,6 @@ let fields: string[] = []
 
 let fieldsType: FieldsType | null = null
 
-
-let first: string = props.first
 let list: ListItem[] = []
 
 function init() {
@@ -48,26 +44,22 @@ function init() {
   buildList(godsData)
 }
 
-
 function buildList(godsData) {
   const godNames = Object.keys(godsData)
   for (const god of godNames) {
     const godData = godsData[god]
-    const [rule, from, to, luckLevel, alias] = godData as GodData
-    const row:ListItem = {key: god, content: [], luck: luckLevel}
+    const [rule, , to, luckLevel, alias] = godData as GodData
+    const row: ListItem = { key: god, content: [], luck: luckLevel }
     if (alias && alias.length > 0) row.alias = alias
     if (fieldsType !== null) {
       for (let i = 0; i < fields.length; i++) {
         const value = rule[i % rule.length]
         row.content.push(getTran(value, to))
       }
-      
     } else {
       row.content.push(getTran(rule, to))
     }
     list.push(row)
-    
-    
   }
 }
 
@@ -75,27 +67,35 @@ init()
 </script>
 
 <template>
-  <table class="godsTable" :style="{'--v-item-width': props.vItemWidth + 'px', '--v-item-padding-x': props.vItemPaddingX + 'px'}">
+  <table
+    class="godsTable"
+    :style="{
+      '--v-item-width': props.vItemWidth + 'px',
+      '--v-item-padding-x': props.vItemPaddingX + 'px'
+    }"
+  >
     <thead v-if="fieldsType !== null">
       <tr>
-        <th>{{ first }}</th>
+        <th>{{ props.first }}</th>
         <th v-for="field in fields" :key="field">
           {{ field }}
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(item, index) in list" :key="item.key">
+      <tr v-for="item in list" :key="item.key">
         <td class="god-key">
-        {{ item.key }}
+          {{ item.key }}
           <div v-if="item.alias">
-            <span class="god-alias" v-for="n in item.alias">{{ n }}</span>
+            <span v-for="n in item.alias" :key="n" class="god-alias">{{ n }}</span>
           </div>
         </td>
-        <td v-for="v in item.content">
+        <td v-for="v in item.content" :key="v">
           <span v-if="typeof v === 'string' || typeof v === 'number'">{{ v }}</span>
-          <template v-else v-for='vItem in v'>
-            <span class="v-item">{{ vItem }}</span>
+          <template v-else>
+            <template v-for="vItem in v" :key="vItem">
+              <span class="v-item">{{ vItem }}</span>
+            </template>
           </template>
         </td>
       </tr>
@@ -122,7 +122,7 @@ init()
   .v-item {
     display: inline-block;
     padding: 4px var(--v-item-padding-x);
-    min-width:  var(--v-item-width);
+    min-width: var(--v-item-width);
   }
 }
 </style>

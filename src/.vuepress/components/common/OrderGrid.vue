@@ -32,6 +32,7 @@ const colCountXs = computed(() => {
     >
       <div
         v-for="field in fields"
+        :key="field.name"
         class="orderGrid__field-item"
         :class="`orderGrid__field-item--${field.name}`"
       >

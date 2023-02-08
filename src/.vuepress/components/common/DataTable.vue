@@ -30,7 +30,7 @@ const props = withDefaults(defineProps<Props>(), {
     </thead>
     <tbody>
       <tr v-for="(data, index) in props.datas" :key="props.idField ? data[props.idField] : index">
-        <td v-for="field in fields">
+        <td v-for="field in fields" :key="field.name">
           {{ data[field.name] }}
         </td>
       </tr>

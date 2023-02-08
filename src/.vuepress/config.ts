@@ -37,7 +37,8 @@ export default defineUserConfig({
         BranchHideStem: path.resolve(__dirname, './components/pageView/BranchHideStem.vue'),
         TakeSound: path.resolve(__dirname, './components/pageView/TakeSound.vue'),
         FetalGod: path.resolve(__dirname, './components/pageView/FetalGod.vue'),
-        GodsTable: path.resolve(__dirname, './components/pageView/GodsTable.vue')
+        GodsTable: path.resolve(__dirname, './components/pageView/GodsTable.vue'),
+        HourGodsTable: path.resolve(__dirname, './components/pageView/HourGodsTable.vue')
       }
     })
     // redirectPlugin({

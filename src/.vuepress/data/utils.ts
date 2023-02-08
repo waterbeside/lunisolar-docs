@@ -1,4 +1,5 @@
 import lunisolar, { Branch, Stem } from 'lunisolar'
+import zh from 'lunisolar/locale/zh'
 // import type { Branch, Stem}
 
 export const cyclicNum = (offset: number, min: number, max: number, isDesc = false): number[] => {
@@ -102,4 +103,56 @@ export const computeSBValue = (stemValue: number, branchValue: number): number =
   // 如果一个为奇数一个为偶数，则不能组合
   if ((stemValue + branchValue) % 2 !== 0) throw new Error('Invalid SB value')
   return (stemValue % 10) + ((6 - (branchValue >> 1) + (stemValue >> 1)) % 6) * 10
+}
+
+export type FieldsType = 
+| 'branch' | 'stem' | 'season' | 'term1' 
+| 'month' | 'sb' | 'Trigram8' | 'direction24'
+| 'day' | 'branchMonth'
+
+const transListCache = new Map<FieldsType, string[]>()
+
+
+// 取得用于翻译成泽字的列表
+export function getTransList(fieldsType: FieldsType) {
+  if (transListCache.has(fieldsType)) return transListCache.get(fieldsType) as string[]
+  let fields:string[] = []
+  if (fieldsType === 'stem') {
+    fields = [...zh.stems as string[]]
+  } else if (fieldsType === 'branch') {
+    fields = [...zh.branchs as string[]]
+  } else if (fieldsType === 'season') {
+    fields = [...zh.seasonName as string[]]
+  } else if (fieldsType === 'month') {
+    fields = [...zh.lunarMonths as string[]]
+  } else if (fieldsType === 'term1') {
+    fields = new Array(12).fill(0).map((v, i) => {
+      return (zh.solarTerm  as string[])[(i * 2 - 1 + 24) % 24]
+    })
+  } else if (fieldsType === 'sb') {
+    fields = new Array(60).fill(0).map((v, i) => {
+      const s = (zh.stems as string[])[i % 10]
+      const b = (zh.branchs as string[])[i % 12]
+      return `${s}${b}`
+    })
+  } else if (fieldsType === 'Trigram8') {
+    fields = [...zh.eightTrigram as string[]]
+  } else if (fieldsType === 'direction24') {
+    fields = getDirection24List('zh').map(v => v.name)
+  } else if (fieldsType === 'day') {
+    fields = [...zh.lunarDays as string[]]
+  } else if (fieldsType === 'branchMonth') {
+    fields = [...(zh.lunarMonths as string[]).slice(10, 12), ...(zh.lunarMonths as string[]).slice(0, 10)]
+  }
+  transListCache.set(fieldsType, fields)
+  return fields
+}
+
+export function getTran(value: string | number | number[], godTo: FieldsType) {
+  const tran = getTransList(godTo)
+  if (value === null) return ''
+  if (typeof value === 'number'|| ( typeof value === 'string' && !Number.isNaN(Number(value)))) return tran[value]
+  if (typeof value === 'string') return value
+  const valuesTran = value.map(v => getTran(v, godTo))
+  return valuesTran
 }

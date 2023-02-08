@@ -2,13 +2,8 @@
 import { defineProps, withDefaults } from 'vue'
 // import DataTable from '../common/DataTable.vue'
 import { gods } from '../../data/gods'
-import zh from 'lunisolar/locale/zh'
-import { getDirection24List } from '../../data/utils'
+import { getTransList, getTran, FieldsType  } from '../../data/utils'
 
-type FieldsType = 
-  | 'branch' | 'stem' | 'season' | 'term1' 
-  | 'month' | 'sb' | 'Trigram8' | 'direction24'
-  | 'day'
 
 interface Props {
   godType: 'year' | 'month' | 'day' | 'hour'
@@ -41,7 +36,6 @@ let fieldsType: FieldsType | null = null
 
 let first: string = props.first
 let list: ListItem[] = []
-const transListCache = new Map<FieldsType, string[]>()
 
 function init() {
   const godsData = gods[props.godType][props.godBuildType]
@@ -54,50 +48,6 @@ function init() {
   buildList(godsData)
 }
 
-// 取得用于翻译成泽字的列表
-function getTransList(fieldsType: FieldsType) {
-  if (transListCache.has(fieldsType)) return transListCache.get(fieldsType) as string[]
-  let fields:string[] = []
-  if (fieldsType === 'stem') {
-    fields = [...zh.stems]
-  } else if (fieldsType === 'branch') {
-    fields = [...zh.branchs]
-  } else if (fieldsType === 'season') {
-    fields = [...zh.seasonName]
-  } else if (fieldsType === 'month') {
-    fields = [...zh.lunarMonths]
-  } else if (fieldsType === 'term1') {
-    fields = new Array(12).fill(0).map((v, i) => {
-      const solarTerm = zh.solarTerm.map((v, i) => {
-        zh.solarTerm[(i + 2) % 24]
-      })
-      return solarTerm[(i * 2 + 1) % 24]
-    })
-  } else if (fieldsType === 'sb') {
-    fields = new Array(60).fill(0).map((v, i) => {
-      const s = zh.stems[i % 10]
-      const b = zh.branchs[i % 12]
-      return `${s}${b}`
-    })
-  } else if (fieldsType === 'Trigram8') {
-    fields = [...zh.eightTrigram]
-  } else if (fieldsType === 'direction24') {
-    fields = getDirection24List('zh').map(v => v.name)
-  } else if (fieldsType === 'day') {
-    fields = [...zh.lunarDays]
-  }
-  transListCache.set(fieldsType, fields)
-  return fields
-}
-
-function getTran(value: string | number | number[], godTo: FieldsType) {
-  const tran = getTransList(godTo)
-  if (value === null) return ''
-  if (typeof value === 'number'|| ( typeof value === 'string' && !Number.isNaN(Number(value)))) return tran[value]
-  if (typeof value === 'string') return value
-  const valuesTran = value.map(v => getTran(v, godTo))
-  return valuesTran
-}
 
 function buildList(godsData) {
   const godNames = Object.keys(godsData)

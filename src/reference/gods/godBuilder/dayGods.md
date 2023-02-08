@@ -22,5 +22,5 @@
 
 ## 日神按节气取数者
 
-<GodsTable godType="day" godBuildType="日神按节气取数者。" :vItemPaddingX="10" />
+<GodsTable godType="day" godBuildType="日神按节气取数者" :vItemPaddingX="10" />
 

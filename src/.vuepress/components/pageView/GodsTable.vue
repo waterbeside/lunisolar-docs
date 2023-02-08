@@ -104,7 +104,6 @@ function buildList(godsData) {
   for (const god of godNames) {
     const godData = godsData[god]
     const [rule, from, to, luckLevel, alias] = godData as GodData
-    console.log(rule)
     const row:ListItem = {key: god, content: [], luck: luckLevel}
     if (alias && alias.length > 0) row.alias = alias
     if (fieldsType !== null) {

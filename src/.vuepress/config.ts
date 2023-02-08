@@ -36,7 +36,8 @@ export default defineUserConfig({
         BranchConflict: path.resolve(__dirname, './components/pageView/BranchConflict.vue'),
         BranchHideStem: path.resolve(__dirname, './components/pageView/BranchHideStem.vue'),
         TakeSound: path.resolve(__dirname, './components/pageView/TakeSound.vue'),
-        FetalGod: path.resolve(__dirname, './components/pageView/FetalGod.vue')
+        FetalGod: path.resolve(__dirname, './components/pageView/FetalGod.vue'),
+        GodsTable: path.resolve(__dirname, './components/pageView/GodsTable.vue')
       }
     })
     // redirectPlugin({

@@ -1,5 +1,9 @@
 # 日神
 
+:::info 参考
+参考《钦定协纪辨方书》卷九
+:::
+
 ## 日神取一定干支者
 
 <GodsTable godType="day" godBuildType="日神取一定干支者" :vItemPaddingX="8" />

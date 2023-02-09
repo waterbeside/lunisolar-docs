@@ -38,7 +38,9 @@ export default defineUserConfig({
         TakeSound: path.resolve(__dirname, './components/pageView/TakeSound.vue'),
         FetalGod: path.resolve(__dirname, './components/pageView/FetalGod.vue'),
         GodsTable: path.resolve(__dirname, './components/pageView/GodsTable.vue'),
-        HourGodsTable: path.resolve(__dirname, './components/pageView/HourGodsTable.vue')
+        HourGodsTable: path.resolve(__dirname, './components/pageView/HourGodsTable.vue'),
+        GodGoodBadLevel: path.resolve(__dirname, './components/pageView/GodGoodBadLevel.vue'),
+        
       }
     })
     // redirectPlugin({

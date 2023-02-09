@@ -1,5 +1,9 @@
 # 月神
 
+:::info 参考
+参考《钦定协纪辨方书》卷九
+:::
+
 ## 月神取月建三合者
 
 <GodsTable godType="month" godBuildType="月神取月建三合者" fieldsType="branchMonth" />

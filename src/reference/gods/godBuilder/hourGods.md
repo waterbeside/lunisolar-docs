@@ -1,5 +1,9 @@
 # 时神
 
+:::info 参考
+参考《钦定协纪辨方书》卷九
+:::
+
 ## 时神从日干起者
 
 <GodsTable godType="hour" godBuildType="时神从日干起者" />

@@ -7,7 +7,6 @@ export const zhSidebar = sidebar({
     {
       text: '功能与使用',
       prefix: 'functional/',
-      // children: "structure",
       children: [
         'parse.md',
         'gregorian.md',
@@ -24,7 +23,6 @@ export const zhSidebar = sidebar({
     {
       text: '插件',
       prefix: 'plugins/',
-      // children: "structure",
       children: ['about.md', 'fetalGod.md', 'takeSound.md', 'theGods.md', 'char8ex.md']
     },
     'i18n.md'
@@ -63,9 +61,17 @@ export const zhSidebar = sidebar({
           prefix: 'godBuilder/',
           children: ['yearGods.md', 'monthGods.md', 'dayGods.md', 'hourGods.md']
         },
-        'godsDesc.md'
+        {
+          text: '神煞宜忌',
+          prefix: 'godGoodBad/',
+          children: ['good.md', 'bad.md']
+        }
       ]
     },
-    'acts.md'
+    {
+      text: '宜忌用事',
+      prefix: 'acts/',
+      children: ['actsLevel.md', 'actsCate.md']
+    }
   ]
 })

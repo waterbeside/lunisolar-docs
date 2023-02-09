@@ -1,5 +1,9 @@
 # 年神
 
+:::info 参考
+参考《钦定协纪辨方书》卷九
+:::
+
 ## 年神随岁干起者
 
 <GodsTable godType="year" godBuildType="年神随岁干起者"  />

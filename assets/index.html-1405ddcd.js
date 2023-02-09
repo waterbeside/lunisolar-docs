@@ -1,1 +1,0 @@
-import{_ as t,V as a,W as n,X as e,Y as s}from"./framework-b070b9df.js";const c={},o=e("h1",{id:"api",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#api","aria-hidden":"true"},"#"),s(" API")],-1),r=e("p",null,"此处会进行各种类的说明",-1),_=[o,r];function d(i,l){return a(),n("div",null,_)}const f=t(c,[["render",d],["__file","index.html.vue"]]);export{f as default};

@@ -77,7 +77,7 @@ lunisolar().theGods.getDuty12God()
 
 ## 4 长生十二神
 
-**建除十二神** 分别为：长生、沐浴、冠带、临官、帝旺、衰、病、死、墓、绝、胎、养
+**长生十二神** 分别为：长生、沐浴、冠带、临官、帝旺、衰、病、死、墓、绝、胎、养
 
 |    | 甲 | 乙 | 丙 | 丁 | 戊 | 己 | 庚 | 辛 | 壬 | 癸 |
 |----|---|---|---|---|---|---|---|---|---|---|
@@ -141,7 +141,7 @@ dh: 'day' | 'hour'
 
 ## 6 其它神煞（年神，月神，日神，时神）
 
-按《辨方书·卷九》把各类神煞划分为年神、月神、日神、时神
+按《辨方书·卷九》把各类神煞划分为[年神](../../reference/gods/godBuilder/yearGods.md)、[月神](../../reference/gods/godBuilder/monthGods.md)、[日神](../../reference/gods/godBuilder/dayGods.md)、[时神](../../reference/gods/godBuilder/hourGods.md)
 
 ### 6.1 getGods方法
 

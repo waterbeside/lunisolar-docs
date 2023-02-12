@@ -10,7 +10,6 @@ for (const key of godKeys) {
   const listItem = { key, content: new Array(6).fill('').map(i => new Array())}
   for (const levelItem of GOD_LEVEL_DICT[key]) {
     const [levelIdx, branchValue, gods ] = levelItem
-    console.log('getTran', getTran(branchValue, 'branch'))
     const branchs = getTran(branchValue, 'branch').join('') + '月'
     listItem.content[levelIdx].push({branchs, gods})
   }

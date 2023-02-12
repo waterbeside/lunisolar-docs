@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 import OrderGrid from '../common/OrderGrid.vue'
-import { defineProps, computed } from 'vue'
-import { TheGods } from 'lunisolar/plugins/theGods'
+import { defineProps } from 'vue'
+import theGods from 'lunisolar/plugins/theGods'
+
+
+const TheGods = theGods.TheGods
 
 interface Props {
   actType: 0 | 1 | 2 | 3
@@ -28,6 +31,3 @@ const list: { value: string }[] = TheGods.getAllActs(props.actType).map(i => ({v
   />
 </template>
 
-// <style lang="scss" scoped>
-
-// </style>

@@ -10,7 +10,7 @@ specifiers:
   eslint-config-prettier: ^8.6.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.9.0
-  lunisolar: ^2.1.5
+  lunisolar: ^2.1.9
   prettier: ^2.8.3
   typescript: ^4.9.5
   vue: ^3.2.47
@@ -21,7 +21,7 @@ specifiers:
   vuepress-theme-hope: 2.0.0-beta.165
 
 dependencies:
-  lunisolar: 2.1.5
+  lunisolar: 2.1.9
 
 devDependencies:
   '@typescript-eslint/eslint-plugin': 5.50.0_go4drrxstycfikanvu45pi4vgq
@@ -4798,8 +4798,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lunisolar/2.1.5:
-    resolution: {integrity: sha512-SONZZcUjOdA2ODzS7rcSqcJLFiOmySJmcqk6uvt/MQJ3ZSEGZc2HGnrglW0AAAzg6Xg9GjBMm64TKWyIpfuXUQ==}
+  /lunisolar/2.1.9:
+    resolution: {integrity: sha512-+jFwfeydhUSc6NQShw6RFD4BLHuzmQn78MUHrU63NUhlcF65dYOQQMjPAd21ZUT+ePQ+LA56YT3RC2rCwUT/ww==}
     dev: false
 
   /magic-string/0.25.9:

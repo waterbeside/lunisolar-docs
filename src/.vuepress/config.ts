@@ -40,6 +40,7 @@ export default defineUserConfig({
         GodsTable: path.resolve(__dirname, './components/pageView/GodsTable.vue'),
         HourGodsTable: path.resolve(__dirname, './components/pageView/HourGodsTable.vue'),
         GodGoodBadLevel: path.resolve(__dirname, './components/pageView/GodGoodBadLevel.vue'),
+        ActsTable: path.resolve(__dirname, './components/pageView/ActsTable.vue'),
         
       }
     })

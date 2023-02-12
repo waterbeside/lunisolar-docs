@@ -90,9 +90,9 @@ flowchart TD
     Char8--year/month/day/hour取得四柱对象-->SB
     SB-->Stem
     SB-->Branch
-    Stem--e5-->Element5
+    Stem--五行-->Element5
     Stem--纳甲-->Trigram8
-    Branch--e5-->Element5
+    Branch--五行-->Element5
     Branch--地支藏干-->Stem
     Branch--相冲相刑相合等-->Branch
     Char8--日主--> Stem

@@ -131,3 +131,7 @@ table {
     border-color: var(--table-border-color)
   }
 }
+
+.code-tabs-nav-tab.active {
+  border-bottom: 2px solid $primary-color;
+}

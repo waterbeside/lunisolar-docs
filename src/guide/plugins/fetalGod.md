@@ -18,6 +18,41 @@
   辰戌雞棲巳亥床，犯着六甲身堕胎。
 ```
 
+
+## 安装
+
+::: code-tabs#installation
+
+@tab:active pnpm
+
+```sh
+pnpm install @lunisolar/plubin-fetalgod
+```
+
+@tab yarn
+
+```sh
+yarn add @lunisolar/plubin-fetalgod
+```
+
+@tab npm
+
+```sh
+npm install @lunisolar/plubin-fetalgod
+```
+
+:::
+
+:::warning 注意
+
+使用lunisolar@2.x版本时，lunisolar包已内置有该插件，
+
+可通过 `import fetalGod from 'lunisolar/plugins/fetalGod'` 直接导入使用，无需另外安装。
+
+后续版本将 **移除** 所有内置的插件，用户请按需安装下载使用。
+
+:::
+
 ## 用法
 
 查询胎神要先导入 fetalGod 插件，
@@ -29,8 +64,11 @@
 示例：
 
 ```typescript
-import fetalGod from 'lunisolar/plugins/fetalGod'
 import lunisolar from 'lunisolar'
+import { fetalGod } from '@lunisolar/plugin-fetalgod'
+
+// lunisolar@v2.x可通下以下方式导入，后续版本会取消，不再推荐使用
+// import fetalGod from 'lunisolar/plugins/fetalGod' 
 
 lunisolar.extend(fetalGod)
 

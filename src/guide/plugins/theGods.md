@@ -14,15 +14,58 @@
 
 ## 2 快速上手
 
-```typescript
 
-// ---  安装
+### 安装
+
+::: code-tabs#installation
+
+@tab:active pnpm
+
+```sh
+pnpm install @lunisolar/plubin-char8ex
+```
+
+@tab yarn
+
+```sh
+yarn add @lunisolar/plubin-char8ex
+```
+
+@tab npm
+
+```sh
+npm install @lunisolar/plubin-char8ex
+```
+
+:::
+
+:::warning 注意
+
+使用lunisolar@2.x版本时，lunisolar包已内置有该插件，
+
+可通过 `import theGods from 'lunisolar/plugins/theGods'` 直接导入使用，无需另外安装。
+
+后续版本将 **移除** 所有内置的插件，用户请按需安装下载使用。
+
+:::
+
+### 加载
+
+```typescript
 // 引入lunisolar
 import lunisolar from 'lunisolar'
 // 引入 theGods 插件
-import theGods from 'lunisolar/plugins/theGods'
+import { theGods } from '@lunisolar/plugin-thegods'
+// lunisolar@v2.x可通下以下方式导入，后续版本会取消，不再推荐使用
+// import theGods from 'lunisolar/plugins/theGods'
+
 // 加载插件
 lunisolar.extend(theGods)
+```
+
+### 使用
+
+```typescript
 
 // ---  使用
 const lsr = lunisolar('2018-10-04')

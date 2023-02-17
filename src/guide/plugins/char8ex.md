@@ -2,7 +2,7 @@
 
 ## 简介
 
-`lunisolar.js`本身可能过`Lunisolar`实例的`char8`属性实现基本的八字查询功能, 但未包括十神和神煞等功能。使用**Char8Ex**插件后，将会在`Lunisolar``实例上添加一个char8ex()`方法, 除了包含原char8的功能外，还加入了十神和神煞的查询。
+`lunisolar.js`本身可能过`Lunisolar`实例的`char8`属性实现基本的八字查询功能, 但未包括十神和神煞等功能。使用**Char8Ex**插件后，将会在`Lunisolar`实例上添加一个`char8ex()`方法, 除了包含原char8的功能外，还加入了十神和神煞的查询。
 
 使用`lunisolar().char8ex()`创建一个[**Char8Ex**](../../api/char8ex.md)实例
 
@@ -14,19 +14,63 @@
 lunisolar().char8ex(sex: 0 | 1): Char8Ex
 ```
 
-> 注意：加载`char8ex`插件时，将自动加载`takeSound`插件（五行纳音插件），所以请不要再重复加`takeSound`
+:::warning 注意
+加载`char8ex`插件时，将自动加载`takeSound`插件（五行纳音插件），所以请不要再重复加`takeSound`
+:::
 
 ## 快速上手
 
+### 安装
+
+::: code-tabs#installation
+
+@tab:active pnpm
+
+```sh
+pnpm install @lunisolar/plubin-char8ex
+```
+
+@tab yarn
+
+```sh
+yarn add @lunisolar/plubin-char8ex
+```
+
+@tab npm
+
+```sh
+npm install @lunisolar/plubin-char8ex
+```
+
+:::
+
+:::warning 注意
+
+使用lunisolar@2.x版本时，lunisolar包已内置有该插件，
+
+可通过 `import char8ex from 'lunisolar/plugins/char8ex'` 直接导入使用，无需另外安装。
+
+后续版本将 **移除** 所有内置的插件，用户请按需安装下载使用。
+
+:::
+
+### 加载
+
 ```typescript
-// ---  安装
 // 引入lunisolar
 import lunisolar from 'lunisolar'
 // 引入 theGods 插件
-import char8ex from 'lunisolar/plugins/char8ex'
+import { char8ex } from '@lunisolar/plugin-char8ex'
+// lunisolar@v2.x可通下以下方式导入，后续版本会取消，不再推荐使用
+// import char8ex from 'lunisolar/plugins/char8ex'
+
 // 加载插件
 lunisolar.extend(char8ex)
+```
 
+### 使用
+
+```typescript
 
 // ---  使用
 // 创建一个Char8Ex实例对象, 该八字为 2023-01-15 12:26出生的男孩
@@ -66,18 +110,8 @@ console.log(c8ex.year.gods.map(item => item.name)) // ['文昌貴人', '金輿',
 char8ex插件默认语言与lunisolar一样为繁体中文，如需要其它语言，须再另外加载
 :::
 
-## 加载
 
-```typescript
-// 引入lunisolar
-import lunisolar from 'lunisolar'
-// 引入 theGods 插件
-import char8ex from 'lunisolar/plugins/char8ex'
-// 加载插件
-lunisolar.extend(char8ex)
-```
-
-## 使用
+## 八字对象
 
 ```typescript
 // 创建一个Char8Ex实例

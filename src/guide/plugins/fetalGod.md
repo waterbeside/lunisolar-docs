@@ -26,7 +26,7 @@
 @tab:active pnpm
 
 ```sh
-pnpm install @lunisolar/plubin-fetalgod
+pnpm add @lunisolar/plubin-fetalgod
 ```
 
 @tab yarn

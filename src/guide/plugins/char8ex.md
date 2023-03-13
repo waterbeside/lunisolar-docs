@@ -22,24 +22,26 @@ lunisolar().char8ex(sex: 0 | 1): Char8Ex
 
 ### 安装
 
+由于八字增强插件虽要用到五行纳音，所以须同时安装五行纳音插件
+
 ::: code-tabs#installation
 
 @tab:active pnpm
 
 ```sh
-pnpm install @lunisolar/plubin-char8ex
+pnpm add @lunisolar/plubin-char8ex @lunisolar/plugin-takesound
 ```
 
 @tab yarn
 
 ```sh
-yarn add @lunisolar/plubin-char8ex
+yarn add @lunisolar/plubin-char8ex @lunisolar/plugin-takesound
 ```
 
 @tab npm
 
 ```sh
-npm install @lunisolar/plubin-char8ex
+npm install @lunisolar/plubin-char8ex @lunisolar/plugin-takesound
 ```
 
 :::

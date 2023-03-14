@@ -21,7 +21,13 @@
 | minute    | 分 0 ~ 59 | | number |
 | second    | 秒 0 ~ 59 | | number |
 | millis    | 毫秒 0 ~ 999 | | number |
+| utc()      | 转为utc模式 | | Lunisolar |
+| isUTC()      | 检查是否为UTC模式的实例 | | boolean |
+| utcOffset(offset) | 取得，或设置utc偏移值 | **offset**: number \| undefined <br/> · 当为undefined时，为取得utc偏移值, 返回单位为分钟的number值 <br /> · 当为number类型时，为设置utc偏移值，并把时间转为utc时间，返回一个新的Lunisolar实例。如果设置的offset范围在[-16, 16], 则单位为小时，其它情况为分钟 | Lunisolar \| number |
+| local()      | 转为本地时间 | | Lunisolar |
 | valueOf()  | 返回Date对象的valueOf(), 即时间戳 | | number |
+| toISOString()  | 返回Date对象的toISOString() | | string |
+| toUTCString()  | 返回Date对象的toUTCString() | | string |
 | toString() | 返回当前 Date对象的toUTCString() + 阴历的格式化后的日期时间: 例“Wed, 24 Aug 2022 14:50:51 GMT (二〇二二年七月廿七亥時)” | | string |
 
 **Lunisolar.format() 标识符参考**

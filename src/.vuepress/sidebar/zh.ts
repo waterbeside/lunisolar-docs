@@ -17,7 +17,8 @@ export const zhSidebar = sidebar({
         'branch.md',
         'element5.md',
         'format.md',
-        'diff.md'
+        'diff.md',
+        'utc.md',
       ]
     },
     {

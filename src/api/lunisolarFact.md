@@ -8,6 +8,15 @@
 lunisolar(date?: string | number | Date | Lunisolar, config?: ConfigType): Lunisolar
 ```
 
+```typescript
+interface ConfigType {
+  isUTC: boolean // 是否使用UTC时间，为true时，lunisolar生成的所有时间都是UTC时间，需要用local转为本地时
+  offset: number // 时间偏移，以分钟为单位
+  changeAgeTerm: number | null // 换岁节气, 默认为2, 即立春，如果为null刚为正月初一换岁
+  lang: string // 默認語言
+}
+```
+
 ## lunisolar.fromLunar()
 
 用于通过阴历创建一个**Lunisolar**实例对象：
@@ -31,6 +40,22 @@ type FromLunarData = {
 lunisolar.fromLunar(lunarData: FromLunarData, config: ConfigType): Lunisolar
 ```
 
+## lunisolar.utc()
+
+用于创建一个UTC时间
+
+```typescript
+lunisolar.utc(date?: string | number | Date | Lunisolar, config?: ConfigType): Lunisolar
+```
+
+其参数与lunisolar()的参数一致，而config.isUTC会自动设为true
+
+```typescript
+// 以下两种写法的效果一致
+const lsr1 = lunisolar('2023-03-14 18:00', { isUTC: true })
+const lsr2 = lunisolar.utc('2023-03-14 18:00')
+```
+
 ## lunisolar.config()
 
 更改全局配置
@@ -39,6 +64,7 @@ lunisolar.fromLunar(lunarData: FromLunarData, config: ConfigType): Lunisolar
 
 ```typescript
 interface ConfigType {
+  isUTC: boolean // 是否使用UTC时间，默认为false, 为true时，lunisolar生成的所有时间都是UTC时间，需要用local转为本地时
   changeAgeTerm: number | null // 换岁节气
   lang: string // 使用语言包的名称
 }
@@ -50,7 +76,6 @@ lunisolar.config(config: ConfigType): typeof lunisolar
 加载插件
 
 方法会返回lunisolar以便链式操作
-
 
 具体用法请参考文档：[插件-基本说明](../guide/plugins/about.md)
 
@@ -68,7 +93,6 @@ lunisolar.extend<T = unknown>(plugin: PluginFunc<T>, options?: T): typeof luniso
 
 方法会返回lunisolar以便链式操作
 
-
 具体用法请参考文档：[国际化](../guide/i18n.md)
 
 ```typescript
@@ -76,7 +100,7 @@ lunisolar.extend<T = unknown>(plugin: PluginFunc<T>, options?: T): typeof luniso
  * @param {LsrLocale | LsrLocale[]} localeData 语言包
  * @param {boolean} unChangeLang 是否使用原来正使用的语言包，默认加载新包时会使用新语言包，设置为true时则只加载而不使用
  */
-lunisolar.localeData(
+lunisolar.locale(
   localeData: LsrLocale | LsrLocale[],
   unChangeLang: boolean = false
 ): typeof lunisolar

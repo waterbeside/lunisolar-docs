@@ -25,8 +25,10 @@ lunisolar(date?: string | number | Date | Lunisolar, config?: ConfigType): Lunis
 
 ```typescript
 type ConfigType = {
-  lang: string, // 语言包名称，默认为zh，即使用繁体中文
+  lang: string // 语言包名称，默认为zh，即使用繁体中文
   changeAgeTerm: number // 换岁时气的索引，默认值为2，即立春。（注：节气列表从小寒开始）
+  isUTC: boolean // 是否使用UTC时间，为true时，lunisolar生成的所有时间都是UTC时间，需要用local转为本地时
+  offset: number // 时间偏移，以分钟为单位, 默认为0
 }
 ```
 
@@ -146,4 +148,20 @@ const lsr2 = lunisolar.fromLunar({
 
 console.log(lsr.format('YYYY-MM-DD')) // 2020-01-25
 
+```
+
+## lunisolar.utc()
+
+用于创建一个UTC时间，返回一个 [**Lunisolar**](../../api/lunisolarClass.md)实例对象：
+
+```typescript
+lunisolar.utc(date?: string | number | Date | Lunisolar, config?: ConfigType): Lunisolar
+```
+
+其参数与lunisolar()的参数一致，而config.isUTC会自动设为true
+
+```typescript
+// 以下两种写法的效果一致
+const lsr1 = lunisolar('2023-03-14 18:00', { isUTC: true })
+const lsr2 = lunisolar.utc('2023-03-14 18:00')
 ```

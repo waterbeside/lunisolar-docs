@@ -7,10 +7,10 @@ lunisolar内置了一些插件，包括以下这些：
 
 |插件| 介绍 | 文档 | 项目仓库 |
 |---|---|---| --- |
-| fetalGod | 胎神占方 | [文档](./fetalGod.md) | [GitHub](https://github.com/lunisolar-js/plugin-fetalgod) |
-| takeSound | 五行纳音 | [文档](./takeSound.md)  | [GitHub](https://github.com/lunisolar-js/plugin-takesound) |
-| theGods | 神煞宜忌 | [文档](./theGods.md) | [GitHub](https://github.com/lunisolar-js/plugin-thegods) |
-| char8ex | 八字增强 | [文档](./char8ex.md)  | [GitHub](https://github.com/lunisolar-js/plugin-char8ex) |
+| fetalGod | 胎神占方 | [文档](./fetalGod.md) | [GitHub](https://github.com/lunisolar-js/plugins) |
+| takeSound | 五行纳音 | [文档](./takeSound.md)  | [GitHub](https://github.com/lunisolar-js/plugins) |
+| theGods | 神煞宜忌 | [文档](./theGods.md) | [GitHub](https://github.com/lunisolar-js/plugins) |
+| char8ex | 八字增强 | [文档](./char8ex.md)  | [GitHub](https://github.com/lunisolar-js/plugins) |
 
 ## 自定义插件
 
@@ -19,7 +19,7 @@ lunisolar内置了一些插件，包括以下这些：
 ```typescript
 import { PluginFunc, Lunisolar } from 'lunisolar'
 
-// 为新添的属性加上类型声明 ()
+// 如果你使用的是typescript, 为新添的属性加上类型声明
 declare module 'lunisolar' {
   interface Lunisolar {
     showExample: string
@@ -27,13 +27,8 @@ declare module 'lunisolar' {
   }
 }
 
-interface LunisolarEx extends Lunisolar {
-  showExample: string
-  exampleMethod(): void
-}
-
 const pluginName: PluginFunc = async (options, lsClass, lsFactory) => {
-  const lsProto = lsClass.prototype as unknown as LunisolarEx
+  const lsProto = lsClass.prototype
   // 添加属性
   lsProto.showExample = 'hello'
 

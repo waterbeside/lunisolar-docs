@@ -7,10 +7,10 @@ lunisolar内置了一些插件，包括以下这些：
 
 |插件| 介绍 | 文档 | 项目仓库 |
 |---|---|---| --- |
-| fetalGod | 胎神占方 | [文档](./fetalGod.md) | [GitHub](https://github.com/lunisolar-js/plugins) |
-| takeSound | 五行纳音 | [文档](./takeSound.md)  | [GitHub](https://github.com/lunisolar-js/plugins) |
-| theGods | 神煞宜忌 | [文档](./theGods.md) | [GitHub](https://github.com/lunisolar-js/plugins) |
-| char8ex | 八字增强 | [文档](./char8ex.md)  | [GitHub](https://github.com/lunisolar-js/plugins) |
+| fetalGod | 胎神占方 | [文档](./fetalGod.md) | [GitHub](https://github.com/lunisolars/plugins) |
+| takeSound | 五行纳音 | [文档](./takeSound.md)  | [GitHub](https://github.com/lunisolars/plugins) |
+| theGods | 神煞宜忌 | [文档](./theGods.md) | [GitHub](https://github.com/lunisolars/plugins) |
+| char8ex | 八字增强 | [文档](./char8ex.md)  | [GitHub](https://github.com/lunisolars/plugins) |
 
 ## 自定义插件
 

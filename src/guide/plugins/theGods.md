@@ -22,7 +22,7 @@
 @tab:active pnpm
 
 ```sh
-pnpm install @lunisolar/plugin-char8ex
+pnpm add @lunisolar/plugin-char8ex
 ```
 
 @tab yarn

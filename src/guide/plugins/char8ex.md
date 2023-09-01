@@ -29,19 +29,19 @@ lunisolar().char8ex(sex: 0 | 1): Char8Ex
 @tab:active pnpm
 
 ```sh
-pnpm add @lunisolar/plubin-char8ex @lunisolar/plugin-takesound
+pnpm add @lunisolar/plugin-char8ex @lunisolar/plugin-takesound
 ```
 
 @tab yarn
 
 ```sh
-yarn add @lunisolar/plubin-char8ex @lunisolar/plugin-takesound
+yarn add @lunisolar/plugin-char8ex @lunisolar/plugin-takesound
 ```
 
 @tab npm
 
 ```sh
-npm install @lunisolar/plubin-char8ex @lunisolar/plugin-takesound
+npm install @lunisolar/plugin-char8ex @lunisolar/plugin-takesound
 ```
 
 :::

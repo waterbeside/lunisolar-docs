@@ -13,19 +13,19 @@
 @tab:active pnpm
 
 ```sh
-pnpm add @lunisolar/plubin-takesound
+pnpm add @lunisolar/plugin-takesound
 ```
 
 @tab yarn
 
 ```sh
-yarn add @lunisolar/plubin-takesound
+yarn add @lunisolar/plugin-takesound
 ```
 
 @tab npm
 
 ```sh
-npm install @lunisolar/plubin-takesound
+npm install @lunisolar/plugin-takesound
 ```
 
 :::

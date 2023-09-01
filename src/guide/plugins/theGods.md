@@ -22,19 +22,19 @@
 @tab:active pnpm
 
 ```sh
-pnpm install @lunisolar/plubin-char8ex
+pnpm install @lunisolar/plugin-char8ex
 ```
 
 @tab yarn
 
 ```sh
-yarn add @lunisolar/plubin-char8ex
+yarn add @lunisolar/plugin-char8ex
 ```
 
 @tab npm
 
 ```sh
-npm install @lunisolar/plubin-char8ex
+npm install @lunisolar/plugin-char8ex
 ```
 
 :::

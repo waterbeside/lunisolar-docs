@@ -26,19 +26,19 @@
 @tab:active pnpm
 
 ```sh
-pnpm add @lunisolar/plubin-fetalgod
+pnpm add @lunisolar/plugin-fetalgod
 ```
 
 @tab yarn
 
 ```sh
-yarn add @lunisolar/plubin-fetalgod
+yarn add @lunisolar/plugin-fetalgod
 ```
 
 @tab npm
 
 ```sh
-npm install @lunisolar/plubin-fetalgod
+npm install @lunisolar/plugin-fetalgod
 ```
 
 :::

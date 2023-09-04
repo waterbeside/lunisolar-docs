@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: 项目主页
+title: Lunisolar.js 使用Typescript编写的专业农历库
 heroImage: /logo.png
 heroText: LUNISOLAR
 tagline: 专业的Javascript农历库

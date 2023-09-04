@@ -40,7 +40,7 @@ npm install @lunisolar/plugin-char8ex
 
 :::warning 注意
 
-使用lunisolar@2.x版本时，lunisolar包已内置有该插件，
+使用`lunisolar@2.x`版本时，lunisolar包已内置有该插件，
 
 可通过 `import theGods from 'lunisolar/plugins/theGods'` 直接导入使用，无需另外安装。
 

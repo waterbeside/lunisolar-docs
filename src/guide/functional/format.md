@@ -12,8 +12,8 @@ lunisolar('2022/07/18 14:40').format('lYn年 農歷lMn月lDn日 第lHn個時辰'
 lunisolar('2022/07/18 14:40').format('cY cM cD cH') // '壬寅 丁未 壬申 丁未'
 
 lunisolar('2022/07/18 14:40').format('八字： cY cM cD cH') // '八字：壬寅 丁未 壬申 丁未'
+lunisolar('2022/07/18 14:40').format('cYs-cYb cMs-cMb cDs-cDb cHs-cHb') // '壬-寅 丁-未 壬-申 丁-未'
 lunisolar('2022/03/10').format('cZ年') // '虎年'
-lunisolar('2022/03/10').format('cYs-cYb cMs-cMb cDs-cDb cHs-cHb') // '壬-寅 丁-未 壬-申 丁-未'
 
 // 提示： 使用方括号[]可对里边的内容进行转义, 如要显示Year这个单词，要放在[]内才能正确显示。
 lunisolar('2022/07/18 14:40').format('[Year:]YYYY') // 'Year:2022'
@@ -78,3 +78,4 @@ lunisolar('2022/07/18 14:40').format('[Year:]YYYY') // 'Year:2022'
 | dddd | Sunday-Saturday （中文的話： 星期日、星期一 ~ 星期六）| 星期几 |
 | A | AM / PM | 上/下午，大写 |
 | a | am / pm | 上/下午，小写 |
+<!-- | dR | 1 ~ 5 | 该星期几在该月的第 n 次出现 | -->

@@ -14,7 +14,6 @@
 
 ## 2 快速上手
 
-
 ### 安装
 
 ::: code-tabs#installation

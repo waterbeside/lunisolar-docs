@@ -18,10 +18,18 @@ export default defineUserConfig({
     [
       'meta',
       {
-        description:
-          'lunisolar.js 是一个以Typescript编写的专业的农历库， 农历库，支持阴历公历互转，支持各类黄历数据查询，如八字四柱、阴历、神煞宜忌、建除十二神、胎神占方、吉神方位、五行纳音等。支持自定义插件。'
+        name: 'description',
+        content: 
+          'lunisolar.js是一个以Typescript编写的专业的农历库， 农历库，支持阴历公历互转，支持各类黄历数据查询，如八字四柱、阴历、神煞宜忌、建除十二神、胎神占方、吉神方位、五行纳音等。支持自定义插件。',    
       }
-    ]
+    ],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: 'lunar, lunisolar, 农历, 黄历, 四柱, 八字, 神煞, 阴历, 宜忌, 吉凶'
+      }
+    ],
   ],
   theme,
 

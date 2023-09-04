@@ -10,9 +10,14 @@ lunisolar('2022/07/18 14:40').format('lY年 lMlD lH時') // '二〇二二年 六
 lunisolar('2022/07/18 14:40').format('lY年 lM(lL)lD lH時') // '二〇二二年 六月(大)二十 未時'
 lunisolar('2022/07/18 14:40').format('lYn年 農歷lMn月lDn日 第lHn個時辰') // '2022年 農歷6月20日 第8個時辰'
 lunisolar('2022/07/18 14:40').format('cY cM cD cH') // '壬寅 丁未 壬申 丁未'
-lunisolar('2022/07/18 14:40').format('[八字：] cY cM cD cH') // '八字：壬寅 丁未 壬申 丁未'
+
+lunisolar('2022/07/18 14:40').format('八字： cY cM cD cH') // '八字：壬寅 丁未 壬申 丁未'
 lunisolar('2022/03/10').format('cZ年') // '虎年'
-lunisolar('2022/03/10').format('cYs-cYb cMs-cMb cDs-cDb cHs-cHb') // ''壬-寅 丁-未 壬-申 丁-未''
+lunisolar('2022/03/10').format('cYs-cYb cMs-cMb cDs-cDb cHs-cHb') // '壬-寅 丁-未 壬-申 丁-未'
+
+// 提示： 使用方括号[]可对里边的内容进行转义, 如要显示Year这个单词，要放在[]内才能正确显示。
+lunisolar('2022/07/18 14:40').format('[Year:]YYYY') // 'Year:2022'
+
 ```
 
 ## 标识符
@@ -23,19 +28,18 @@ lunisolar('2022/03/10').format('cYs-cYb cMs-cMb cDs-cDb cHs-cHb') // ''壬-寅 �
 
 | 标识 | 示例 | 描述 |
 | ---- | ---- | --- |
-| lY  |  二〇二二 | 当年阴历正月初一所在的公历年 |
+| lY  |  二〇二二 | 当年阴历正月初一所在的公历年 (`lY` 为 `lunarYear`缩写, 其它类推) |
 | lYn  |  2022 | 当年阴历正月初一所在的公历年, 数字形式开示 |
 | lM  |  正月-十二月 | 阴历月 |
-| lMn  |  1-12 | 阴历月, 以数字形式表示 |
+| lMn  |  1-12 | 阴历月, 以数字形式表示, 当为闰月时，数字会加上100，如闰二月，则结果为102 |
 | lD  | 初一 | 阴历日 |
 | lDn  | 1 - 30 | 阴历日, 以数字形式表示 |
 | lH  | 子 - 亥 | 时辰 |
 | lHn  | 1 - 12 | 时辰序号，从1开始 |
-| lDn  | 1 - 30 | 阴历日, 以数字形式表示 |
 | lL  | 大 \| 小  | 阴历月是大月还是小月 |
-| cY  | 甲子 | 八字年柱 |
-| cYs  | 甲 | 八字年柱天干 |
-| cYb  | 子 | 八字年柱地支 |
+| cY  | 甲子 | 八字年柱 (`cY` 为 `char8 Year` 缩写) |
+| cYs  | 甲 | 八字年柱天干 (`cYs` 为 `char8 Year stem` 缩写) |
+| cYb  | 子 | 八字年柱地支 (`cYb` 为 `char8 Year branch` 缩写) |
 | cM  | 甲子 | 八字月柱 |
 | cMs  | 甲 | 八字月柱天干 |
 | cMb  | 子 | 八字月柱地支 |

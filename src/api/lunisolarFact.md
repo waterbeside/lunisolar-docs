@@ -141,3 +141,9 @@ lunisolar.locale(
 ## lunisolar.Direction24
 
 返回[Direction24](./direction24.md)构造函数
+
+## lunisolar.Markers
+
+<Badge type="warn" vertical="middle" text="v2.3.0+"/>
+
+返回[Markers](./markers.md)构造函数

@@ -39,6 +39,10 @@ features:
     icon: spring
     details: 支持每年的节气日期查询，指定日期的最近节气日期查询
 
+  - title: 节气、备忘
+    icon: longzhou
+    details: 内置国内外节日，支持自定义节日和日期备忘
+
   - title: Typescript
     icon: typescript
     details: 使用typescript编写，方便用于你的typescript项目

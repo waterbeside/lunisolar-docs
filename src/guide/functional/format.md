@@ -78,4 +78,6 @@ lunisolar('2022/07/18 14:40').format('[Year:]YYYY') // 'Year:2022'
 | dddd | Sunday-Saturday （中文的話： 星期日、星期一 ~ 星期六）| 星期几 |
 | A | AM / PM | 上/下午，大写 |
 | a | am / pm | 上/下午，小写 |
-<!-- | dR | 1 ~ 5 | 该星期几在该月的第 n 次出现 | -->
+| dR  <Badge type="warn" vertical="middle" text="v2.3.0+"/> | 1 ~ 5 | 该天的`星期几`在该月第 **多少** 次出现 |
+| dRr <Badge type="warn" vertical="middle" text="v2.3.0+"/> | 1 ~ 5 | 该天的`星期几`在该**月倒**数第 **多少** 次出现 |
+

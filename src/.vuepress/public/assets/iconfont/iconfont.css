@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3869282 */
-  src: url('iconfont.woff2?t=1674624837054') format('woff2'),
-       url('iconfont.woff?t=1674624837054') format('woff'),
-       url('iconfont.ttf?t=1674624837054') format('truetype');
+  src: url('iconfont.woff2?t=1698893036919') format('woff2'),
+       url('iconfont.woff?t=1698893036919') format('woff'),
+       url('iconfont.ttf?t=1698893036919') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,58 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-longzhou:before {
+  content: "\e651";
+}
+
+.icon-guide:before {
+  content: "\e6de";
+}
+
+.icon-reference:before {
+  content: "\e60b";
+}
+
+.icon-api:before {
+  content: "\e7e1";
+}
+
+.icon-about:before {
+  content: "\e635";
+}
+
+.icon-in:before {
+  content: "\e669";
+}
+
+.icon-fengshui:before {
+  content: "\e62c";
+}
+
+.icon-qing:before {
+  content: "\e603";
+}
+
+.icon-puglin:before {
+  content: "\e69c";
+}
+
+.icon-daji:before {
+  content: "\e60a";
+}
+
+.icon-spring:before {
+  content: "\e6f8";
+}
+
+.icon-pregnancy:before {
+  content: "\e61a";
+}
+
+.icon-pillar:before {
+  content: "\e629";
 }
 
 .icon-mogui:before {
@@ -33,7 +85,7 @@
   content: "\e73f";
 }
 
-.icon-icon-taikong:before {
+.icon-taikong:before {
   content: "\e644";
 }
 

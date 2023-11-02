@@ -19,6 +19,7 @@ export const zhSidebar = sidebar({
         'format.md',
         'diff.md',
         'utc.md',
+        'markers.md',
       ]
     },
     {
@@ -32,6 +33,7 @@ export const zhSidebar = sidebar({
     'lunisolarFact.md',
     'lunisolarClass.md',
     'lunar.md',
+    'markers.md',
     'char8.md',
     'sb.md',
     'stem.md',

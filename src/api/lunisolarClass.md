@@ -4,6 +4,7 @@
 | --- | ---  | --- | --- |
 | lunar      | 阴历数据对象 | | [Lunar](./lunar.md) |
 | char8      | 八字对象 | | [Char8](./char8.md) |
+| markers  <Badge type="warn" vertical="middle" text="v2.3.0+"/>    | 日期备注对象（可用于节日、备忘等） | | [Markers](./markers.md) |
 | solarTerm       | 返回当前日期的节气对象，如果不是节气，返回null | | [SolarTerm](./solarTerm.md) \| null |
 | getSeason()  | 取得当前季节 | | string |
 | getSeasonIndex()  | 以春夏秋冬为顺序取得当前季节索引 | | number |
@@ -32,7 +33,7 @@
 
 **Lunisolar.format() 标识符参考**
 
-| 标识 | 示例 | 描述 |
+| <div style="min-width: 100px">标识</div> | 示例 | 描述 |
 | ---- | ---- | --- |
 | lY  |  二〇二二 | 当年阴历正月初一所在的公历年 |
 | lYn  |  2022 | 当年阴历正月初一所在的公历年, 数字形式开示 |
@@ -81,6 +82,8 @@
 | ZZ | -0500 | UTC偏移，两位数 |
 | A | AM / PM | 上/下午，大写 |
 | a | am / pm | 上/下午，小写 |
+| dR <Badge type="warn" vertical="middle" text="v2.3.0+"/>  | 1 ~ 5 | 该天的`星期几`在该月第 **多少** 次出现 |
+| dRr <Badge type="warn" vertical="middle" text="v2.3.0+"/>  | 1 ~ 5 | 该天的`星期几`在该**月倒**数第 **多少** 次出现 |
 
 **Lunisolar.diff() unit可选值参考**
 

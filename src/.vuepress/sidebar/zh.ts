@@ -75,6 +75,7 @@ export const zhSidebar = sidebar({
       text: '宜忌用事',
       prefix: 'acts/',
       children: ['actsLevel.md', 'actsCate.md']
-    }
+    },
+    'festival.md',
   ]
 })

@@ -5,7 +5,7 @@
 
 从2.3.0版本开始，可以通过**[Markers](../../api/markers.md)**类添加日期备注，可用于添加节日、备忘等。
 
-lunisolar内置了中国的各类节日列表，全局加载后，可通过lunisolar().markers实例取得该天的节日。 你也可以自定义添加日期节日、备忘等。 通过以下几个列子，可快速上手。
+lunisolar内置了中国的各类[节日列表](../../reference/festival.md), 全局加载后，可通过lunisolar().markers实例取得该天的节日。 你也可以自定义添加日期节日、备忘等。 通过以下几个列子，可快速上手。
 
 :::tip
 对于lunisolar来说，所有节日实际上都是marker。
@@ -134,7 +134,11 @@ console.log(lunisolar('2023-10-30').markers.list) // []
 
 ### 2.1 全局添加节日marker
 
-lunisolar內置了一系列的节日，但需要另外加载，其包含了简体版和繁体版
+lunisolar內置了一系列的节日，但需要另外加载，其包含了简体版和繁体版。
+
+:::info
+lunisolar內置的节日markers请参考[[参考/内置节日]](../../reference/festival.md)
+:::
 
 ```typescript
 
@@ -301,7 +305,7 @@ lsr.markers.find({ name: '世界野生动植物日' })
 /** 
 return:
 {
-  tag: ['国际主题', 'environment', '节日']
+  tag: ['international', 'environment', '节日']
   name: '世界野生动植物日'
 }
  */
@@ -363,8 +367,8 @@ import festivals from 'lunisolar/markers/festivals.zh'  // 繁体版
 // 添加marker
 lunisolar.Markers.add(festivals)
 
-// 删除所有包含“傳統節日” 标签的节日
-lunisolar.Markers.removeByTag('傳統節日') // 所有加进来的传统节日将被删除
+// 删除所有包含 “traditional” 标签的节日
+lunisolar.Markers.removeByTag('traditional') // 所有加进来的传统节日将被删除
 
 
 // 删除指定名称的节日

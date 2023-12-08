@@ -49,6 +49,18 @@ lunisolar('2022/07/18 14:40').format('[Year:]YYYY') // 'Year:2022'
 | cH | 甲子 | 八字日柱 |
 | cHs  | 甲 | 八字日柱天干 |
 | cHb  | 子 | 八字日柱地支 |
+| cYn  <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 59 | 八字年柱干支序号 (比`cY` 多个 `n`，凡干支相关的，想取序号，在后补个`n`即可) |
+| cYsn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 9 | 八字年柱天干序号 (比`cYs` 多个 `n`) |
+| cYbn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 11 | 八字年柱地支序号 (比`cYb` 多个 `n`) |
+| cMn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 59 | 八字月柱干支序号 |
+| cMsn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 9 | 八字月柱天干序号 |
+| cMbn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 | 八字月柱地支序号 |
+| cDn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 59 | 八字日柱干支序号 |
+| cDsn <Badge type="warn" vertical="middle" text="> v2.4.0"/>  | 0 - 9 | 八字日柱天干序号 |
+| cDbn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 | 八字日柱地支序号 |
+| cHn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 59 | 八字日柱序号 |
+| cHsn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 - 9 | 八字日柱天干序号 |
+| cHbn <Badge type="warn" vertical="middle" text="> v2.4.0"/> | 0 | 八字日柱地支序号 |
 | cZ  | 鼠 | 生肖 （立春换岁，可通过config设置换岁时机） |
 | t  | 1-24 | 节气，从小寒到冬至的序号，从1开始，如果该日不是节气，返回空字符串 |
 | T  | 小寒-冬至 | 节气字符串，如果该日不是节气，返回空字符串 |
@@ -78,6 +90,6 @@ lunisolar('2022/07/18 14:40').format('[Year:]YYYY') // 'Year:2022'
 | dddd | Sunday-Saturday （中文的話： 星期日、星期一 ~ 星期六）| 星期几 |
 | A | AM / PM | 上/下午，大写 |
 | a | am / pm | 上/下午，小写 |
-| dR  <Badge type="warn" vertical="middle" text="v2.3.0+"/> | 1 ~ 5 | 该天的`星期几`在该月第 **多少** 次出现 |
-| dRr <Badge type="warn" vertical="middle" text="v2.3.0+"/> | 1 ~ 5 | 该天的`星期几`在该**月倒**数第 **多少** 次出现 |
+| dR  <Badge type="warn" vertical="middle" text="> v2.3.0"/> | 1 ~ 5 | 该天的`星期几`在该月第 **多少** 次出现 |
+| dRr <Badge type="warn" vertical="middle" text="> v2.3.0"/> | 1 ~ 5 | 该天的`星期几`在该**月倒**数第 **多少** 次出现 |
 

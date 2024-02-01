@@ -225,7 +225,7 @@ lunisolar().theGods.getGoodGods(ymdh: 'Y' | 'M' | 'D' | 'H' | string): God[]
 
 ---
 
-### 6.3 getGoodGods方法
+### 6.3 getBadGods方法
 
 取得指定指定年、月、日、时的凶神
 

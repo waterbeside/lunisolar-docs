@@ -21,19 +21,19 @@
 @tab:active pnpm
 
 ```sh
-pnpm add @lunisolar/plugin-char8ex
+pnpm add @lunisolar/plugin-thegods
 ```
 
 @tab yarn
 
 ```sh
-yarn add @lunisolar/plugin-char8ex
+yarn add @lunisolar/plugin-thegods
 ```
 
 @tab npm
 
 ```sh
-npm install @lunisolar/plugin-char8ex
+npm install @lunisolar/plugin-thegods
 ```
 
 :::

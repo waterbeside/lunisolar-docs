@@ -165,6 +165,6 @@ lunisolar().lunar.leapMonthIsBig
 /**
  * @return {Date}
  */
-lunisolar().lunar.getLunarNewYearDay()
+lunisolar.Lunar.getLunarNewYearDay()
 ```
 

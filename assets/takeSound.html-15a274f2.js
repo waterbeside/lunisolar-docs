@@ -1,1 +1,0 @@
-import{_ as o,V as t,W as n,$ as c,X as e,Y as r,F as s}from"./framework-d1125686.js";const d={},_=e("h1",{id:"五行纳音",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#五行纳音","aria-hidden":"true"},"#"),r(" 五行纳音")],-1);function l(i,u){const a=s("TakeSound");return t(),n("div",null,[_,c(a)])}const f=o(d,[["render",l],["__file","takeSound.html.vue"]]);export{f as default};

@@ -139,7 +139,7 @@ lunisolar().theGods.getDuty12God()
 方法:
 
 ```typescript
-lunisolar().theGods.getDuty12God(ymdh: 'year' | 'month' | 'day' | 'hour'): God
+lunisolar().theGods.getLife12God(ymdh: 'year' | 'month' | 'day' | 'hour'): God
 ```
 
 参数:
